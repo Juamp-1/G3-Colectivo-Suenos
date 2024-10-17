@@ -14,6 +14,7 @@ body {
     text-align: center;
     padding: 20px;
 }
+<<<<<<< HEAD
 
 .navbar a {
     color: white;
@@ -77,3 +78,25 @@ body {
         transform: translateX(0);
     }
 }
+=======
+.body {
+    background-color: #f8f9fa;
+  }
+  
+  h1 {
+    color: #4A90E2;
+  }
+  
+  .nav-link {
+    font-weight: bold;
+  }
+  
+  .img-fluid {
+    transition: transform 0.2s;
+  }
+  
+  .img-fluid:hover {
+    transform: scale(1.05);
+  }
+  
+>>>>>>> a08b8fbea1b7885239555710a6256fd3f4927aea

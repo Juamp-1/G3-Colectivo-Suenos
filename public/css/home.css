@@ -1,8 +1,82 @@
-.home{
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #7ED321;
+    --background-color: #F5F5F5;
+    --text-color: #333;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .navbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
+  .section {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .about {
+    background-color: #EAF6FF;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  .goals {
+    background-color: #DFF8E3;
+    animation: slideIn 1.5s ease-out;
+  }
+  
+  .gallery .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .image-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .image-grid img:hover {
+    transform: scale(1.05);
+  }
+  
+  .footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+  
+/*.home{
 
 }
 
 .home h1{
 
     
-}
+}*/

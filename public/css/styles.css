@@ -3,6 +3,8 @@
 @import url('./general.css');
 @import url('./forms.css');
 @import url('./login.css');
+@import url('./home.css');
+@import url('/registro.css');
 
 /* HEADER*/
 .header {

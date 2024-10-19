@@ -1,0 +1,20 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  h1 {
+    color: #4A90E2;
+  }
+  
+  .nav-link {
+    font-weight: bold;
+  }
+  
+  .img-fluid {
+    transition: transform 0.2s;
+  }
+  
+  .img-fluid:hover {
+    transform: scale(1.05);
+  }
+  

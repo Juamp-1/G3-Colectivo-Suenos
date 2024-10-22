@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+}
+h1, h2 {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.box--star {
+    margin: 30px 0;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box--star hr {
+    width: 100px;
+    border: 2px solid white;
+}
+
+.box--star p i{
+    font-size: 32px;
+}
+
+@media (min-width:1024px) {
+    h1 {
+        font-size: 4rem;
+    }
+    
+    h2 {
+        font-size: 3rem;
+        font-weight: 800;
+    }
+    
+}

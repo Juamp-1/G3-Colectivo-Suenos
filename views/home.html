@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colectivo en Sueños - Fundación Emperador</title>
   <link rel="stylesheet" href="/css/home.css"> <!-- Asegúrate de que esta ruta sea correcta -->
+ <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <script defer src="script.js"></script>
-</head>
-<body> <header>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-1Xq3y2fZ8dG4W3w8cH5y1zB1g7fV6p4w5g5z5h5g5z5h5g5z5h5g5z5h5g5" crossorigin="anonymous"></head>
+<body> 
+  <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-header">
       <a class="navbar-brand logo" href="#">
           <img src="/img/Logo-FE.svg" alt="logo">
@@ -39,19 +41,78 @@
               <li class="nav-item">
                   <a class="nav-link" href="#">Salir</a>
               </li>
+              <li class="nav-item-donate">
+                <a href="#">Donar <i class="fa-solid fa-house"></i></a>
+              </li>
+              
           </ul>
       </div>
   </nav>
 </header>
+<div class="container">
+  <br><h1 class="text-center">Fundacion Emperador</h1></br>
+  <h2 class="text-center">Colectivo Sueños</h2>
+  <h6 class="text-center">- Juntos en la dificultad - </h6>
+ 
+<section id="info" class="section info py-5">
 
-  <section id="about" class="section about py-5">
-    <div class="container">
-      <h2 class="text-center">Un Sueño Colectivo</h2>
-      <p class="text-center">Este proyecto busca empoderar a personas electrodependientes y sus familias, fomentando la empatía y el trabajo comunitario.</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3>¿Quiénes somos?</h3>
+        <p>La Fundación Emperador es una organización dedicada a mejorar la calidad de vida de las personas electrodependientes y sus familias a través de proyectos comunitarios y de apoyo social.</p>
+      </div>
+      <div class="col-md-6">
+        <h3>Nuestra Misión</h3>
+        <p>Fomentar la inclusión y el bienestar de las personas electrodependientes, garantizando su acceso a recursos y espacios de esparcimiento.</p>
+      </div>
     </div>
-  </section>
+    <div class="text-center mt-4">
+      <a href="#contact" class="btn btn-primary">Contáctanos para más información</a>
+    </div>
+  </div>
+</section>
+<section id="about" class="section about py-5">
+  <div class="container">
+    <h2 class="text-center">Un Sueño Colectivo</h2>
+    <p class="text-center">Este proyecto busca empoderar a personas electrodependientes y sus familias, fomentando la empatía y el trabajo comunitario.</p>
+    <div class="text-center"> <!-- Contenedor para centrar el video -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/F1UEzFTPtuc?si=z_ulyKs2eAsZAeey" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
 
-  <section id="goals" class="section goals py-5 bg-dark">
+<section id="carousel" class="section carousel py-5">
+  <div class="container">
+    <h2 class="text-center">Información Importante</h2>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="text-center">
+            <h3>Objetivo general</h3>
+            <p>Adaptar un motorhome con elementos de bioseguridad para las personas con movilidad reducida y brindar una solución a la necesidad de esparcimiento de personas que por sus condiciones de criticidad, de dependencia a la energía eléctrica y a su escasa o nula movilidad se ven impedidos de satisfacer.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="text-center">
+            <h3>Problemática</h3>
+            <p>“A las personas con movilidad reducida, con dependencia funcional, en condición de electrodependientes (ED), y/o en estadío terminal de su enfermedad, pasear, y más aún vacacionar, se les hace casi imposible”.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+  <section id="goals" class="section-goals py-5 bg-dark">
     <div class="container">
       <h2 class="text-center">Objetivos del Proyecto</h2>
       <ul class="list-group">
@@ -61,24 +122,83 @@
       </ul>
     </div>
   </section>
-
   <section id="gallery" class="section gallery py-5">
     <div class="container">
       <h2 class="text-center">Galería de Actividades</h2>
       <div class="row">
         <div class="col-md-4">
-          <img src="img/sesion1.jpg" class="img-fluid" alt="Sesión comunitaria">
+          <img src="/img/img-colectivo.jpg" class="img-fluid gallery-img" alt="Sesión comunitaria">
         </div>
         <div class="col-md-4">
-          <img src="img/sesion2.jpg" class="img-fluid" alt="Taller creativo">
+          <img src="/img/colectivo-suenos.jpg" class="img-fluid gallery-img" alt="Taller creativo">
         </div>
         <div class="col-md-4">
-          <img src="img/sesion3.jpg" class="img-fluid" alt="Reunión de familias">
+          <img src="/img/niño-5.jpg" class="img-fluid gallery-img" alt="Reunión de familias">
         </div>
       </div>
     </div>
   </section>
+  <section id="project-info" class="section project-info py-5">
+    <div class="container">
+      <h2 class="text-center">Información del Proyecto</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Condición Actual</h3>
+          <p>En ejecución</p>
+        </div>
+        <div class="col-md-6">
+          <h3>Presupuesto</h3>
+          <p>$8.000.000</p>
+        </div>
+        <div class="col-md-6">
+          <h3>Presentación</h3>
+          <p>Presentación del proyecto a Gobernación de la Pcia de Santa Fe, a la Municipalidad de Rosario, a la Bolsa de Comercio, al Concejo Deliberante de la ciudad de Rosario, Asociación de Clínicas y Sanatorios Privados.</p>
+        </div>
+        <div class="col-md-6">
+          <h3>Financiamiento</h3>
+          <p>Gobierno de la Pcia de Santa Fe</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="problem-description" class="section problem-description py-5">
+    <div class="container">
+      <h2 class="text-center">Descripción del Problema</h2>
+      <p>“A las personas con movilidad reducida, con dependencia funcional, en condición de electrodependientes (ED), y/o en estadío terminal de su enfermedad, pasear, y más aún vacacionar, se les hace casi imposible”.</p>
+    </div>
+  </section>
+  
+  <section id="objectives" class="section objectives py-5">
+    <div class="container">
+      <h2 class="text-center">Objetivos del Proyecto</h2>
+      <h3>Objetivo General</h3>
+      <p>Brindar una solución concreta a la necesidad de esparcimiento de las personas, que por sus condiciones de criticidad, de dependencia a la energía eléctrica y a su escasa o nula movilidad se ven impedidos de satisfacer.</p>
+      
+      <h3>Objetivos Específicos</h3>
+      <ul>
+        <li>Adaptar un ómnibus, tipo motorhome y acondicionarlo oportunamente con aparatos de biomedicina, otorgándole las condiciones de seguridad y accesibilidad esenciales, para realizar paseos y viajes junto a sus familiares.</li>
+        <li>Mejorar la calidad de vida de las familias con personas con movilidad reducida y dependencia funcional.</li>
+        <li>Dar una solución efectiva y eficiente al problema del encierro, confinamiento y aislamiento de las personas con dependencia funcional, con ED y pacientes en situación terminal.</li>
+      </ul>
+    </div>
+  </section>
+  
+  <section id="justification" class="section justification py-5">
+    <div class="container">
+      <h2 class="text-center">Fundamentación</h2>
+      <p>La dependencia funcional se define como un estado en el cual el sujeto se ve obligado a confiar en la asistencia de otros para lograr cubrir sus necesidades. La enfermedad crónica cercena el proyecto de vida del paciente y su núcleo familiar, afectando sus sentimientos de esperanza y optimismo. Se prioriza la salud y los cuidados médicos, dejando poco espacio para el disfrute y la satisfacción personal.</p>
+      
+      <p>En una encuesta realizada en febrero del 2020, el 17% de las familias de nuestra Fundación nunca pudo salir de paseo en familia, y el 48% nunca pudo viajar. La internación domiciliaria se convierte en una modalidad de atención que limita la movilidad y el bienestar de estas personas.</p>
+      
+      <p>Deseamos extender esta actividad recreativa como un servicio de esparcimiento a todas aquellas personas con dificultades en su movilidad, reconociendo sus múltiples necesidades como seres humanos.</p>
+  </section>
 
+
+  
   <footer id="contact" class="footer py-4 bg-dark text-white text-center">
     <h3>Contáctanos</h3>
     <p>Email: <a href="mailto:fundacionemperador@gmail.com" class="text-white">fundacionemperador@gmail.com</a></p>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+

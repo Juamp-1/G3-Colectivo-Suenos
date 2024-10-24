@@ -16,3 +16,7 @@ app.get("/admin", (req, res) =>
 app.listen(PORT, () =>
   console.log("Servidor corriendo en http://localhost:" + PORT)
 );
+
+app.get("/perfil", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "perfUsuario.html"))
+);

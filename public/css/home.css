@@ -1,5 +1,41 @@
 body {
   font-family: Arial, sans-serif;
+  background-image: url("../img/colectivo.jpg");
+}
+
+header {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bg-header {
+  background-color: #2E4053;
+}
+
+.navbar-dark .navbar-brand {
+  color: #FFFFFF;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #FFFFFF;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #CCCCCC;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:active {
+  color: #CCCCCC;
+}
+.logo img {
+  width: 50px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.navbar-brand {
+  margin-left: 0;
 }
 
 .header {

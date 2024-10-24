@@ -17,6 +17,9 @@ app.get("/perfil", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "perfUsuario.html"))
 );
 
+app.get('/login', (req,res) => res.sendFile(path.join(__dirname, 'views', 'login.html')));
+app.get('/recuperar', (req,res) => res.sendFile(path.join(__dirname, 'views', 'recuperar.html')));
+app.get('/registro', (req,res) => res.sendFile(path.join(__dirname, 'views', 'registro.html')));
 
 
 app.listen(PORT, () =>

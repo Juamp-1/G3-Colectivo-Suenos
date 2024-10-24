@@ -7,10 +7,13 @@ const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) =>
-  res.sendFile(path.join(__dirname, "views", "home.html"))
+     res.sendFile(path.join(__dirname, "views", "home.html"))
 );
 app.get("/admin", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "admin.html"))
+);
+app.get("/perfil", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "perfUsuario.html"))
 );
 
 app.listen(PORT, () =>

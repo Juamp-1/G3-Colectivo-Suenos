@@ -1,13 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Perfil de Usuario</title>
 </head>
 <body>
-    <h1>perfil</h1>
+    <header>
+        <h1 id="nombre-usuario">Nombre de Usuario</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Opción 1</a></li>
+                <li><a href="#">Opción 2</a></li>
+                <li><a href="#">Opción 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="perfil">
+            <div class="foto">
+                <img src="ruta/a/la/foto.jpg" alt="Foto de Usuario">
+            </div>
+            <div class="informacion-usuario">
+                <h2>Nombre y Apellido</h2>
+                <p>Edad: 25</p>
+                <p>Año de ingreso: 2021</p>
+                <p>Aportes: 15</p>
+            </div>
+        </div>
+        
+        <div class="informacion-adicional">
+            <h3>Información Adicional</h3>
+            <ul>
+                <li><a href="#" onclick="mostrarDatos('Usuario1')">Usuario 1</a></li>
+                <li><a href="#" onclick="mostrarDatos('Usuario2')">Usuario 2</a></li>
+                <li><a href="#" onclick="mostrarDatos('Usuario3')">Usuario 3</a></li>
+                <!-- Agrega más usuarios según sea necesario -->
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        function mostrarDatos(usuario) {
+            alert("Mostrando datos de " + usuario);
+            // Aquí puedes implementar la lógica para mostrar los datos del usuario
+        }
+    </script>
 </body>
 </html>

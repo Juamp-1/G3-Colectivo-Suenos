@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+}
+
+.perfil {
+    display: flex;
+    margin-right: 20px;
+}
+
+.foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px; /* Para hacer la imagen circular */
+}
+
+.informacion-usuario {
+    margin-left: 20px;
+}
+
+.informacion-adicional {
+    margin-top: 20px;
+}
+
+.informacion-adicional ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.informacion-adicional ul li {
+    margin-bottom: 10px;
+}
+
+.informacion-adicional ul li a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+.informacion-adicional ul li a:hover {
+    text-decoration: underline;
+}

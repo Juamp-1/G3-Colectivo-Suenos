@@ -4,48 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colectivo en Sueños - Fundación Emperador</title>
+  <link rel="stylesheet" href="/css/styles.css"> <!-- Asegúrate de que esta ruta sea correcta -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/styles.css">
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="header">
+  <header class="header text-center py-4">
     <h1>Colectivo en Sueños</h1>
-    <nav class="navbar">
-      <a href="#about">Sobre el Proyecto</a>
-      <a href="#goals">Objetivos</a>
-      <a href="#gallery">Galería</a>
-      <a href="#contact">Contacto</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Sobre el Proyecto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#goals">Objetivos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <section id="about" class="section about">
-    <h2>Un Sueño Colectivo</h2>
-    <p>Este proyecto busca empoderar a personas electrodependientes y sus familias, fomentando la empatía y el trabajo comunitario.</p>
-  </section>
-
-  <section id="goals" class="section goals">
-    <h2>Objetivos del Proyecto</h2>
-    <ul>
-      <li>Aumentar la visibilidad de las necesidades de los electrodependientes.</li>
-      <li>Crear espacios de encuentro y colaboración.</li>
-      <li>Brindar apoyo terapéutico y social.</li>
-    </ul>
-  </section>
-
-  <section id="gallery" class="section gallery">
-    <h2>Galería de Actividades</h2>
-    <div class="image-grid">
-      <img src="images/sesion1.jpg" alt="Sesión comunitaria">
-      <img src="images/sesion2.jpg" alt="Taller creativo">
-      <img src="images/sesion3.jpg" alt="Reunión de familias">
+  <section id="about" class="section about py-5">
+    <div class="container">
+      <h2 class="text-center">Un Sueño Colectivo</h2>
+      <p class="text-center">Este proyecto busca empoderar a personas electrodependientes y sus familias, fomentando la empatía y el trabajo comunitario.</p>
     </div>
   </section>
 
-  <footer id="contact" class="footer">
+  <section id="goals" class="section goals py-5 bg-dark">
+    <div class="container">
+      <h2 class="text-center">Objetivos del Proyecto</h2>
+      <ul class="list-group">
+        <li class="list-group-item">Aumentar la visibilidad de las necesidades de los electrodependientes.</li>
+        <li class="list-group-item">Crear espacios de encuentro y colaboración.</li>
+        <li class="list-group-item">Brindar apoyo terapéutico y social.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="gallery" class="section gallery py-5">
+    <div class="container">
+      <h2 class="text-center">Galería de Actividades</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="img/sesion1.jpg" class="img-fluid" alt="Sesión comunitaria">
+        </div>
+        <div class="col-md-4">
+          <img src="img/sesion2.jpg" class="img-fluid" alt="Taller creativo">
+        </div>
+        <div class="col-md-4">
+          <img src="img/sesion3.jpg" class="img-fluid" alt="Reunión de familias">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer py-4 bg-dark text-white text-center">
     <h3>Contáctanos</h3>
-    <p>Email: <a href="mailto:fundacionemperador@gmail.com">fundacionemperador@gmail.com</a></p>
-    <p>Dirección: Bahía Blanca 179 bis, Rosario, Santa Fe</p>
-  </footer>
-</body>
-</html>
+    <p>Email: <a href="mailto:fundacionemperador@gmail.com" class="text-white">fundacionemperador@gmail.com</a></p>

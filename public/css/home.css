@@ -1,8 +1,54 @@
-.home{
-
+body {
+  font-family: Arial, sans-serif;
 }
 
-.home h1{
+.header {
+  background-color: #2E4053; /* Cambiado a #2E4053 */
+  color: white; /* Asegúrate de que el texto sea legible */
+}
 
-    
+.section {
+  padding: 60px 0; /* Espaciado para las secciones */
+}
+
+.footer {
+  background-color: #343a40; /* Color de fondo del footer */
+  color: white; /* Color del texto en el footer */
+}
+
+.footer a {
+  color: #ffffff; /* Color de los enlaces en el footer */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Subrayar enlaces al pasar el mouse */
+}
+
+.bg-light {
+  background-color: #f8f9fa !important; /* Color de fondo claro para secciones */
+}
+
+.goals {
+  background-color: #2E4053; /* Color de fondo de la sección */
+  color: white; /* Color del texto */
+  padding: 40px 0; /* Espaciado interno */
+}
+
+.goals h2 {
+  color: white; /* Color dorado para el título */
+  margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.list-group-item {
+  background-color: #3B4B63; /* Color de fondo de los elementos de la lista */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto de los elementos de la lista */
+  padding: 15px; /* Espaciado interno */
+  margin-bottom: 10px; /* Espaciado entre elementos */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.list-group-item:hover {
+  background-color: #FFD700; /* Cambiar color al pasar el mouse */
+  color: #2E4053; /* Cambiar color del texto al pasar el mouse */
 }

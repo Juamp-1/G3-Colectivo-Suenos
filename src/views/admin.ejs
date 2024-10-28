@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+	<%- include('./partials/head',{
+		title : 'Administración'
+	}) %>
+	<body>
+		<div class="container"> <!-- Contenedor ppal -->
+			<%- include('./partials/header') %>
+
+    <div class="container--admin">
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Opciones</h2>
+            <button class="opcion" id="agregar">Agregar</button>
+            <button class="opcion" id="eliminar">Eliminar</button>
+            <button class="opcion" id="editar">Editar</button>
+        </aside>
+
+        <main class="main-content-admin">
+            <section class="text-center">
+                <h1>Bienvenido al panel de administrador</h1>
+                <p>Aquí puedes administrar tus páginas web</p>
+            </section>
+            <section>
+                <h2 class="mt-4">Administración de páginas</h2>
+                <p>Utiliza las opciones del sidebar para gestionar tus páginas.</p>
+            </section>
+        </main>
+    </div>
+
+
+    <%- include('./partials/footer') %>
+
+
+</body>
+</html>

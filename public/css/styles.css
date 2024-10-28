@@ -1,0 +1,150 @@
+@import url("/css/general.css");
+@import url("/css/admin.css");
+@import url("/css/forms.css");
+@import url("/css/login.css");
+@import url("/css/profile.css");
+@import url("/css/register.css");
+@import url("/css/reset.css");
+
+/* Estilos de Navegación */
+.header {
+	width: 1140px;
+	margin-bottom: 20px;
+	z-index: 999;
+	background-color: #2E4053;
+	color: white;
+	border-radius:  0 0 10px 10px; /* Redondeo en la parte superior */
+    width: 100%; 
+}
+
+.bg-header {
+    background-color: #2E4053;
+}
+
+.navbar-dark .navbar-brand {
+    color: #FFFFFF;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #FFFFFF;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #CCCCCC;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:active {
+    color: #CCCCCC;
+}
+
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.navbar-brand {
+    margin-left: 0;
+}
+
+.main-nav {
+	background-color: rgb(239, 76, 39);
+	padding: 12px 15px;
+	overflow: hidden;
+}
+
+.main-nav li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.menu {
+	float: left;
+	overflow: hidden;
+}
+
+.main-nav li {
+	float: left;
+	margin-right: 30px;
+	line-height: 39px;
+}
+
+.access {
+	float: right;
+}
+
+.access li {
+	margin-right: 0;
+	margin-left: 15px;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 15px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.footer {
+	background-color: #343a40;
+	color: white;
+}
+
+.footer a {
+	color: #007bff;
+}
+
+.footer a:hover {
+	color: #0056b3;
+}
+
+
+
+
+/* Estilos de Formularios */
+.form-container {
+	max-width: 350px;
+	margin: 0 auto;
+}
+
+.form-container h1 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.field-group {
+	margin-bottom: 20px;
+}
+
+.access-form {
+	overflow: hidden;
+}
+
+.access-form label {
+	font-size: 16px;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+
+.field-group input {
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 8px 38px 8px 8px;
+}
+
+.access-form button {
+	font-size: 16px;
+	background-color: #3c8dbc;
+	border: 1px solid #3c8dbc;
+	color: #fff;
+	text-transform: capitalize;
+	width: 300px;
+	padding: 8px 14px;
+	border-radius: 10px;
+	cursor: pointer;
+}

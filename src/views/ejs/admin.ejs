@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('./partials/head', {
+        title : "Administración"
+    }) %>
+
+<body>
+    <header class="container-fluid"> <!-- Contenedor ppal -->
+
+      <nav class="navbar bg-primary border-bottom navbar-expand-md border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a href="/"><img class="logo" src="/img/logo.png" alt="logo craftsy"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Categorías</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Usuarios</a>
+              </li>
+            </ul>
+         
+          </div>
+        </div>
+      </nav>
+    </header>
+       <main class="container mt-3">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+<div>
+  <h2>Productos</h2>
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Escriba aquí..." aria-label="Search">
+    <button class="btn btn-outline-dark" type="submit">Buscar</button>
+  </form>
+</div>
+           
+
+            <a class="btn btn-outline-dark" href="/products/add">Agregar producto</a>
+
+          </div>
+            <div class="card-body">
+            
+             <table class="table">
+                 <thead>
+                   <tr>
+                     <th scope="col">ID</th>
+                     <th scope="col">Imagen</th>
+                     <th scope="col">Producto</th>
+                     <th scope="col">Descripción</th>
+                     <th scope="col">Acciones</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                    <% products.forEach(({id, title,image,description}) => { %>
+                        <tr>
+                            <th scope="row"><%= id %></th>
+                            <td><img width="100" src="<%= image %>" alt=""> </td>
+                            <td><%= title %></td>
+                            <td><%= description %></td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <a class="btn btn-sm btn-success" href="/products/edit/<%= id %>"><i class="fa-solid fa-pencil"></i></a>
+                                    <!-- Button trigger modal -->
+<button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i class="fa-solid fa-trash-can"></i>
+  </button>
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+       
+        <div class="modal-body">
+            <h4 class="text-center">¿Estás seguro de eliminar el producto?</h4>
+            <form method="POST" action="/products/destroy/<%= id %>?_method=DELETE">
+                <div class="d-flex justify-content-center gap-3">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button class="btn  btn-danger" type="submit">Si, borralo</button>
+                </div>
+              
+
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+                                    
+                                    
+                                </div>
+                            </td>
+                          </tr>
+                    <% }) %>
+                   
+                  
+                 </tbody>
+               </table>
+
+     </div>
+     </div>
+    </div>
+  </main>
+    <%- include('./partials/footer') %>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+.bg-header {
+    background-color: #2E4053;
+}
+
+.navbar-dark .navbar-brand {
+    color: #FFFFFF;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #FFFFFF;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #CCCCCC;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:active {
+    color: #CCCCCC;
+}
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.navbar-brand {
+    margin-left: 0;
+}
+
+/* Estilo general del cuerpo */
+
+/* Estilo del contenedor principal */
+.container {
+    background-color: white; /* Fondo blanco para el contenedor */
+    background-image: url(../img/colectivo.jpg);
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilo de los encabezados */
+
+/* Estilo para los botones */
+.btn {
+    border-radius: 5px; /* Bordes redondeados para los botones */
+}
+
+/* Estilo para los textarea */
+
+/* Estilo para la galería de imágenes */
+.img-fluid {
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+    transition: transform 0.2s; /* Transición suave al hacer hover */
+}
+
+.img-fluid:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+/* Estilo para las pestañas */
+.nav-tabs .nav-link {
+    border: none; /* Sin borde en las pestañas */
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #007bff; /* Color de fondo para la pestaña activa */
+    color: white; /* Color del texto para la pestaña activa */
+}

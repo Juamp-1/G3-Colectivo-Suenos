@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<%- include('./partials/head',{
+		title : 'Registro'
+	}) %>
+<body>
+  <div class="container"> <!-- Contenedor ppal -->
+    <%- include('./partials/header') %>
+    
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Registro de Cambios</h1>
+
+    <nav class="nav nav-tabs mb-4" id="myTab" role="tablist">
+      <button class="nav-link active" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button" role="tab">
+        Información
+      </button>
+      <button class="nav-link" id="gallery-tab" data-bs-toggle="tab" data-bs-target="#gallery" type="button" role="tab">
+        Galería de Imágenes
+      </button>
+      <button class="nav-link" id="upload-tab" data-bs-toggle="tab" data-bs-target="#upload" type="button" role="tab">
+        Subir Imágenes
+      </button>
+    </nav>
+
+    <div class="tab-content" id="myTabContent">
+      <!-- Sección de Información -->
+      <div class="tab-pane fade show active" id="info" role="tabpanel">
+        <h3>Información del Proyecto</h3>
+        <p>En esta sección puedes registrar cambios importantes del proyecto y mantener la información actualizada.</p>
+        <textarea class="form-control mb-3" placeholder="Escribe aquí las actualizaciones..."></textarea>
+        <button class="btn btn-primary">Guardar Cambios</button>
+      </div>
+
+      <!-- Galería de Imágenes -->
+      <div class="tab-pane fade" id="gallery" role="tabpanel">
+        <h3>Galería de Imágenes</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="images/image1.jpg" class="img-fluid rounded mb-2" alt="Imagen 1">
+          </div>
+          <div class="col-md-4">
+            <img src="images/image2.jpg" class="img-fluid rounded mb-2" alt="Imagen 2">
+          </div>
+          <div class="col-md-4">
+            <img src="images/image3.jpg" class="img-fluid rounded mb-2" alt="Imagen 3">
+          </div>
+        </div>
+      </div>
+
+      <!-- Subir Imágenes -->
+      <div class="tab-pane fade" id="upload" role="tabpanel">
+        <h3>Adjuntar Nueva Imagen</h3>
+        <form>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Selecciona una imagen</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          <button type="submit" class="btn btn-success">Subir Imagen</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <%- include('./partials/footer') %>
+
+</body>
+</html>

@@ -55,11 +55,12 @@ ul {
 footer {
     text-align: center;
     padding: 10px 0;
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 50%; /* Mover el footer al centro horizontalmente */
     transform: translateX(-50%); /* Ajustar la posición para centrarlo */
     width: 80%; /* Ancho del footer al 80% de la pantalla */
+	
     border-radius: 10px 10px 0 0 ; /* Ajusta el valor para el redondeo que desees */
     background-color: rgba(255, 255, 255, 0.8); /* Color de fondo opcional para mejor visibilidad */
 }

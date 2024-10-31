@@ -5,6 +5,7 @@
 @import url("/css/profile.css");
 @import url("/css/register.css");
 @import url("/css/reset.css");
+@import url("/css/socials.css");
 
 /* Estilos de Navegación */
 .header {
@@ -90,18 +91,6 @@
 	border-radius: 10px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.footer {
-	background-color: #343a40;
-	color: white;
-}
-
-.footer a {
-	color: #007bff;
-}
-
-.footer a:hover {
-	color: #0056b3;
-}
 
 
 
@@ -148,3 +137,4 @@
 	border-radius: 10px;
 	cursor: pointer;
 }
+

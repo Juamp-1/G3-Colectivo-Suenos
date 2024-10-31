@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const indexController = require('../controllers/indexControler')
+const {index, admin} = require('../controllers/indexControler')
 
 
-router.get('/',indexController.index) //-> /
-router.get('/admin',indexController.admin) // -> /admin
+router
+    .get('/',index) //-> /
+    .get('/admin',admin) // -> /admin
 
 
 

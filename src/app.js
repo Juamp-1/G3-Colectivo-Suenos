@@ -6,7 +6,8 @@ const methodOverride = require('method-override')
 const PORT = 3002;
 
 const indexRoutes = require('./routes/index.routes');
-const productsRoutes = require('./routes/products.routes');
+const commentsRoutes = require('./routes/comments.routes');
+const postsRoutes = require('./routes/posts.routes');
 const usersRoutes = require('./routes/users.routes');
 
 //config recursos estáticos
@@ -23,7 +24,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'))
 
 app.use('/', indexRoutes);
-app.use('/products',productsRoutes);
+app.use('/comments',commentsRoutes);
+app.use('/posts', postsRoutes)
 app.use('/users',usersRoutes);
 
 app.listen(PORT, () => 'Servidor corriendo en http://localhost:' + PORT)

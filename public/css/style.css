@@ -20,7 +20,6 @@ body{
   background-image: url(background.jpg);
   background-size: cover;
   background-position: right;
-  overflow: hidden;
 }
 .wrapper{
   box-sizing: border-box;

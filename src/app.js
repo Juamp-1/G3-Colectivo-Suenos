@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
 const methodOverride = require('method-override')
-const PORT = 3002;
+const PORT = 3000;
 
 const indexRoutes = require('./routes/index.routes');
 const commentsRoutes = require('./routes/comments.routes');

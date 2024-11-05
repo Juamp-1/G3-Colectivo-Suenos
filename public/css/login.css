@@ -1,172 +1,64 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-
-.container-main-login{
-  width: 100%;
-    
-  display: flex;
-  text-align: center;
-  color: #333;
-  }
-
-.wrapper--login{
-  width: 420px;
-  background:fixed ;
-  border: 2px solid rgba(246, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba (0,0,0 .2);
-  border-radius: 10px;
-  padding: 30px 40px;
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que el contenido esté centrado verticalmente */
+    margin: 0;
+    background-color: #f0f0f0; /* Color de fondo suave */
+    font-family: Arial, sans-serif; /* Tipo de fuente */
 }
 
-.wrapper--login h1{
-  font-size: 36px;
-  text-align: center;
+.card {
+    background-color: white; /* Fondo blanco para la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaciado interno */
+    width: 100%; /* Ancho total */
+    max-width: 400px; /* Ancho máximo */
 }
 
-.wrapper--login .input-box{
-  position: relative;
-  width: 100%;
-  height: 50px;
-  margin: 30px 0;
+.login-card-header {
+    font-size: 24px; /* Tamaño de fuente del encabezado */
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+    text-align: center; /* Centrar texto */
+    color: #333; /* Color de texto */
 }
 
-.input-box input{
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  border: 2px solid rgba(255, 255, 255, .2);
-  border-radius: 40px;
-  font-size: 16px;
-  
-  padding: 20px 45px 20px 20px;
+.login-field-group {
+    margin-bottom: 15px; /* Espaciado entre campos */
 }
 
-.input-box input::placeholder{
-  color: #3407d8;
+label {
+    display: block; /* Hacer que el label ocupe todo el ancho */
+    margin-bottom: 5px; /* Espacio debajo del label */
+    color: #555; /* Color de texto del label */
 }
 
-.input-box i {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 20px;
+input[type="email"],
+input[type="pass"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
-.wrapper .remember-forgot {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14.5px;
-  margin: -15px 0 15px;
+button {
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    width: 100%; /* Ancho completo */
+    font-size: 16px; /* Tamaño de fuente */
 }
 
-.remember-forgot label input {
-  accent-color: #0b85d1;
-  margin-right: 3px;
+button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
 }
 
-.remember-forgot a{
-  color: #3908ea;
-  text-decoration: none;
-}
-
-.remember-forgot a:hover {
-  text-decoration: underline;
-}
-
-.wrapper--login .btn{
-  width: 100%;
-  height: 45px;
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-  cursor: pointer;
-  font-size: 16px;
-  color: #333;
-  font-weight: 600;
-
-}
-
-.wrapper--login .register-link{
-  font-size: 14.5px;
-  text-align: center;
-  margin: 20px 0 15px;
-}
-
-.register-link p a {
-  color: #6b07ee;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.register-link p a:hover {
-  text-decoration: underline;
-}
-
-
-/* Estilos para el botón de inicio de sesión */
-.btn {
-  /* Estilos iniciales para el botón */
-  background-color: #f87d7d;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* Estilos al pasar el mouse por encima del botón */
-.btn:hover {
-  /* Cambio de color al pasar el mouse por encima */
-  background-color: #555;
-  color: #ec7171;
-  /* Animación simple al pasar el mouse por encima */
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos para el enlace de registro */
-.register-link-text {
-  /* Estilos iniciales para el enlace de registro */
-  color: #f8a9a9;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-
-/* Estilos al pasar el mouse por encima del enlace de registro */
-.register-link-text:hover {
-  /* Cambio de color al pasar el mouse por encima */
-  color: #555;
-  /* Animación simple al pasar el mouse por encima */
-  text-decoration: underline;
-}
-.guest-login {
-  margin-top: 20px; /* Espaciado superior */
-  text-align: center; /* Centrar el texto */
-}
-
-.guest-login-link {
-  color: rgb(5, 2, 2); /* Color del enlace */
-   /* Subrayar el enlace */
-  cursor: pointer; /* Cambiar el cursor al pasar el mouse */
-}
-
-.guest-login-text {
-  color: rgb(29, 14, 14); /* Color del texto */
-   /* Subrayar el texto */
-  cursor: pointer; /* Cambiar el cursor al pasar el mouse */
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transición suave */
-}
-
-/* Estilos al pasar el mouse por encima */
-.guest-login-text:hover {
-  color: rgb(31, 31, 31); /* Cambiar color al pasar el mouse */
-  transform: scale(1.1); /* Aumentar el tamaño ligeramente */
-  text-decoration: underline; 
+.text-danger {
+    color: red; /* Color rojo para mensajes de error */
+    text-align: center; /* Centrar texto */
 }

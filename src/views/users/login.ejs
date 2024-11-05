@@ -2,12 +2,13 @@
 <html lang="es">
     
 
-	<%- include('./partials/head',{
+	<%- include('../partials/head',{
 		title : 'Login'
 	}) %>
-	<body>
+	<body class="login-body">
 		<div class="container"> <!-- Contenedor ppal -->
-			<%- include('./partials/header') %>
+			<%- include('../partials/header') %>
+            <!-- 
 <main class="container-main-login"> 
 
     <div class="wrapper--login">
@@ -40,7 +41,37 @@
         </form>
     </div>
 </main>
-    <%- include('./partials/footer') %>
+-->	<main class="card" style="max-width: 600px;"> <!-- Cuerpo principal del sitio -->
+    <section class="login-card-header">
+        Ingresá a tu cuenta
+    </section>
+    <section class="login-card-body" >
+        
+        <form class="access-form" method="POST">
+            <div class="field-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" value="" required>
+            </div>
+            <div class="login-field-group">
+                <label for="pass">Contraseña</label>
+                <input type="pass" id="passsword" name="pass" placeholder="Escribe tu contraseña" value="" required>
+            </div>
+            <div class="field-group remember-me">
+                <input type="checkbox" id="remember-me" name="remember-me" value="">
+                <label for="remember-me">Recordarme</label>
+            </div>
+            
+            <button type="submit" name="send">Ingresar</button>
+        </form>
+        <div>
+            <p class="text-danger">
+                <%= locals.msg && msg %>
+            </p>
+        </div>
+    </section>
+</main>
+</div>
+    <%- include('../partials/footer') %>
 
 </body>
 </html>

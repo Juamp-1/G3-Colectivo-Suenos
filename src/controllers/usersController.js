@@ -34,7 +34,7 @@ module.exports = {
     },
     login : (req,res) => {
 
-        return res.render('login')
+        return res.render('users/login')
     },
     processLogin : (req,res) => {
         const users = getData('users.json');

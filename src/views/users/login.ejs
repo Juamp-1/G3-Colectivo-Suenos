@@ -41,7 +41,7 @@
         </form>
     </div>
 </main>
--->	<main class="card" style="max-width: 600px;"> <!-- Cuerpo principal del sitio -->
+<main class="card" style="max-width: 600px;">
     <section class="login-card-header">
         Ingresá a tu cuenta
     </section>
@@ -70,6 +70,35 @@
         </div>
     </section>
 </main>
+-->	
+
+
+<div class="login-wrapper">
+    <form  action="">
+        <h1> Inicio de sesión</h1>
+        <div class="input-box">
+            <input type="text" placeholder="Nombre de Usuario"
+            required>
+            <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password"
+                placeholder="Contraseña" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Recuerdame</label>
+                <a href="/forgot.ejs">Olvidaste tu contraseña?</a>
+            </div>
+
+            <button type="submit" class="btn">Iniciar</button>
+
+            <div class="register-link">
+                <p> No tengo una cuenta? <a
+                href="#">Registrate</a></p>
+            </div>
+
 </div>
     <%- include('../partials/footer') %>
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+
+	<%- include('../partials/head',{
+		title : 'Login'
+	}) %>
+	<body class="login-body">
+		<div class="container"> <!-- Contenedor ppal -->
+			<%- include('../partials/header') %>
+
+            <div class="forgot-wrapper">
+                <h2>Recuperar contraseña</h2>
+                <form>
+                    <div class ="forgot-main-wrapper">
+                    <div class="input-box">
+                        <input type="text" placeholder="Correo electrónico" class="input-control">
+                        <i class='bx bxl-gmail'></i>
+                    </div>
+                        <button type="submit" class="btn">enviar</button>
+                    </form>
+                    <p> Ya tienes una cuenta? <a href="login.ejs" class="iniciar">Iniciar sesion</a>
+                    </p>
+                </div>
+                </form>   
+
+
+            <%- include('../partials/footer') %>
+
+        </body>
+        </html>

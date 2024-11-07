@@ -109,26 +109,6 @@
 
 
 /* Estilos para el botón de inicio de sesión */
-.btn {
-  /* Estilos iniciales para el botón */
-  background-color: #f87d7d;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* Estilos al pasar el mouse por encima del botón */
-.btn:hover {
-  /* Cambio de color al pasar el mouse por encima */
-  background-color: #555;
-  color: #ec7171;
-  /* Animación simple al pasar el mouse por encima */
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
 
 /* Estilos para el enlace de registro */
 .register-link-text {

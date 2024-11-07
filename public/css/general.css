@@ -7,9 +7,7 @@ html{
 	color: var(--text-color);
 	text-align: center;
 }
-  body{
-	
-  }
+
 /* Estilos Globales */
 * {
 	box-sizing: border-box;
@@ -38,11 +36,18 @@ body {
 	background-position: right;
 	color: #444;
 	font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background-color: #f8f9fa;
+	
 	color: #333;
 	line-height: 1.5;
 	min-height: 100vh;
 	margin-bottom: 30vh; 
+}
+
+
+h1{
+	font-size: 3rem;
+	font-weight: 900;
+	text-transform: uppercase;
 }
 
 h2 {
@@ -68,6 +73,7 @@ ul {
 	margin-left: 20px;
 }
 
+
 footer {
 	
 	background-color:#2E4053;
@@ -81,9 +87,11 @@ footer {
     min-height: 10vh;
 	
     display: grid; /* Cambiar a flexbox para alinear elementos */
-  	justify-items: center;
+	justify-items: center;
     align-items: center;/* Centrar verticalmente */
     border-radius: 10px 10px 0 0;
 	padding: auto 0;
 	box-shadow: 0 4px 8px rgba(36, 30, 30, 0.2);
 }
+
+

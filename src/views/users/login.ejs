@@ -3,76 +3,13 @@
     
 
 	<%- include('../partials/head',{
-		title : 'Login'
+		title : 'iniciar Sesión'
 	}) %>
-	<body class="login-body">
+	<body>
 		<div class="container"> <!-- Contenedor ppal -->
 			<%- include('../partials/header') %>
-            <!-- 
-<main class="container-main-login"> 
 
-    <div class="wrapper--login">
-        <form class="login-form" action="">
-            <h1 class="form-title">Inicio de sesión</h1>
-            <div class="input-box">
-                <input type="text" class="input-field" placeholder="Nombre de Usuario" required>
-                <i class='bx bxs-user icon'></i>
-            </div>
-            <div class="input-box">
-                <input type="password" class="input-field" placeholder="Contraseña" required>
-                <i class='bx bxs-lock-alt icon'></i>
-            </div>
-
-            <div class="remember-forgot">
-                <label class="remember-label"><input type="checkbox"> Recuerdame</label>
-                <a href="/users/reset" class="forgot-password">Olvidaste tu contraseña?</a>
-            </div>
-
-            <button type="submit" class="btn">Iniciar</button>
-
-            <div class="guest-login">
-                <span class="guest-login-text"><a class="guest-login-link" href="#"></a>Iniciar sesión como invitado</span>
-                
-            </div>
-
-            <div class="register-link">
-                <p>No tengo una cuenta? <a href="#" class="register-link-text">Regístrate</a></p>
-            </div>
-        </form>
-    </div>
-</main>
-<main class="card" style="max-width: 600px;">
-    <section class="login-card-header">
-        Ingresá a tu cuenta
-    </section>
-    <section class="login-card-body" >
-        
-        <form class="access-form" method="POST">
-            <div class="field-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email" value="" required>
-            </div>
-            <div class="login-field-group">
-                <label for="pass">Contraseña</label>
-                <input type="pass" id="passsword" name="pass" placeholder="Escribe tu contraseña" value="" required>
-            </div>
-            <div class="field-group remember-me">
-                <input type="checkbox" id="remember-me" name="remember-me" value="">
-                <label for="remember-me">Recordarme</label>
-            </div>
-            
-            <button type="submit" name="send">Ingresar</button>
-        </form>
-        <div>
-            <p class="text-danger">
-                <%= locals.msg && msg %>
-            </p>
-        </div>
-    </section>
-</main>
--->	
-
-
+          <main class="main-login">  
 <div class="login-wrapper">
     <form  action="">
         <h1> Inicio de sesión</h1>
@@ -89,17 +26,18 @@
 
             <div class="remember-forgot">
                 <label><input type="checkbox"> Recuerdame</label>
-                <a href="/forgot.ejs">Olvidaste tu contraseña?</a>
+                <a href="/users/forgot">Olvidaste tu contraseña?</a>
             </div>
 
             <button type="submit" class="btn">Iniciar</button>
 
             <div class="register-link">
                 <p> No tengo una cuenta? <a
-                href="#">Registrate</a></p>
+                href="/users/register">Registrate</a></p>
             </div>
 
 </div>
+</main>
     <%- include('../partials/footer') %>
 
 </body>

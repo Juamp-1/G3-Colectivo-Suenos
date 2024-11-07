@@ -26,7 +26,7 @@ module.exports = {
             storeData(users, 'users.json')
             return res.redirect('/users/login')
         }else {
-            return res.render('register',{
+            return res.render('users/register',{
                 old : req.body,
                 errors : errors.mapped()
             })
@@ -50,15 +50,18 @@ module.exports = {
                 rol : user.rol
             }
 
-            return res.redirect('/')
+            return res.redirect('/home')
         }else {
             return res.render('users/login',{
                 msg : "Credenciales inválidas"
             })
         }
-              
-
     },
+    forgot : (req,res) => {
+
+        return res.render('users/forgot')
+    },
+
     profile : (req,res) => {
         return res.render('users/profile')
     },

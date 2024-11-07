@@ -92,5 +92,12 @@
     "email": "user@email.com",
     "password": "123654",
     "role": "user"
+  },
+  {
+    "id": 13,
+    "name": "Juan",
+    "email": "juan@gmail.com",
+    "password": "$2a$12$wKD.42ifpjkSt2wIVmPmxe63kuiyVekaFymUR6wOh9It9fabCVlUm",
+    "rol": "user"
   }
 ]

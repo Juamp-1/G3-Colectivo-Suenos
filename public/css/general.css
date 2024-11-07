@@ -40,7 +40,7 @@ body {
 	color: #333;
 	line-height: 1.5;
 	min-height: 100vh;
-	margin-bottom: 30vh; 
+
 }
 
 
@@ -79,11 +79,8 @@ footer {
 	background-color:#2E4053;
 	color: aliceblue;
     padding: 10px 0;
-	position: fixed; 
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%; /* Ancho del footer al 80% de la pantalla */
+	
+     /* Ancho del footer al 80% de la pantalla */
     min-height: 10vh;
 	
     display: grid; /* Cambiar a flexbox para alinear elementos */
@@ -92,6 +89,9 @@ footer {
     border-radius: 10px 10px 0 0;
 	padding: auto 0;
 	box-shadow: 0 4px 8px rgba(36, 30, 30, 0.2);
+}
+.h3-footer{
+	margin-top: 0%;
 }
 
 

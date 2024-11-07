@@ -1,4 +1,8 @@
 :root{
     --color-azul :  #2C3E50;
     --color-verde :#18BC9C;
+        --accent-color: #8672FF;
+        --base-color: white;
+        --text-color: #2E2B41;
+        --input-color: #F3F0FF;
 }

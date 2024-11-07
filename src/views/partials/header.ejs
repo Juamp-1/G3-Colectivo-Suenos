@@ -34,5 +34,14 @@
                         <a class="nav-link" href="/users/login"><img class="icono" src="/img/icons/logout.svg" alt="icono logout"></a>
                     </li>
                 </div>
+                <ul class="menu access">
+                    <% if (locals.userLogin) { %>
+                        <li><a href="/users/profile">Mi Perfil</a></li>
+                        <li><a href="/users/logout">Salir</a></li>
+                    <% }else{ %>
+                    <li><a href="/users/login">login</a></li>
+                    <li><a href="/users/register">registro</a></li>
+                    <% } %>
+                </ul>
     </nav>
 </header>

@@ -4,7 +4,7 @@ const { getData, storeData } = require("../data");
 
 module.exports = {
     register : (req,res) => {
-        return res.render('register')
+        return res.render('users/register')
     },
     processRegister : (req,res) => {
 
@@ -52,7 +52,7 @@ module.exports = {
 
             return res.redirect('/')
         }else {
-            return res.render('login',{
+            return res.render('users/login',{
                 msg : "Credenciales inválidas"
             })
         }
@@ -60,7 +60,7 @@ module.exports = {
 
     },
     profile : (req,res) => {
-        return res.render('profile')
+        return res.render('users/profile')
     },
     logout : (req,res) =>{
         req.session.destroy()

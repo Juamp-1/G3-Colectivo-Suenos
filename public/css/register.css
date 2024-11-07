@@ -1,0 +1,82 @@
+/* Estilos generales 
+.register-body {
+   
+    
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+}*/
+
+.main-content {
+ 
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Títulos */
+.register-body h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4A90E2; /* Color azul */
+}
+
+/* Estilos del formulario */
+.register-body form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-body label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.register-body input[type="text"],
+.register-body input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.register-body input[type="text"]:focus,
+.register-body input[type="password"]:focus {
+    border-color: #4A90E2; /* Color azul al enfocar */
+}
+
+/* Botón de envío */
+.register-body button {
+    padding: 10px;
+    background-color: #4A90E2; /* Color azul */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.register-body button:hover {
+    background-color: #357ABD; /* Color azul más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

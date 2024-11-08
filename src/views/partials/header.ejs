@@ -13,10 +13,11 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="/"> <img class="icono" src="/img/icons/home.svg" alt="icono home"></i></a>
                     </li>
-                    
+                    <% if (locals.userLogin && locals.userLogin.rol == "admin") { %>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin"><img class="icono" src="/img/icons/admin.svg" alt="icono admin"></a>
                     </li>
+                    <% } %>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><img class="icono" src="/img/icons/setting.svg" alt="icono config"></a>
                     </li>

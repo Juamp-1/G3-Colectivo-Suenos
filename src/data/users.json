@@ -99,5 +99,19 @@
     "email": "juan@gmail.com",
     "password": "$2a$12$wKD.42ifpjkSt2wIVmPmxe63kuiyVekaFymUR6wOh9It9fabCVlUm",
     "rol": "user"
+  },
+  {
+    "id": 14,
+    "name": "Aylen",
+    "email": "Asdasd123@gmail.com",
+    "password": "$2a$12$sUo/wnrjUYg6JVIhRj6bKuOFMsZw.BDFIQsd0JBe/eKXCTZX.H/Nq",
+    "rol": "user"
+  },
+  {
+    "id": 15,
+    "name": "asdasd",
+    "email": "Asdasd1@gmail.com",
+    "password": "$2a$12$Y09O.XelxCU.rVrQZZ2mGeKIk3mP0PVu//NuqUZqtXazf8MfT8FVi",
+    "rol": "user"
   }
 ]

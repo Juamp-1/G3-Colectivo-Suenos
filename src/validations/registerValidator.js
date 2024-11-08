@@ -22,7 +22,7 @@ module.exports = [
     }).withMessage("El email ya se encuentra registrado"),
   check("password")
     .notEmpty().withMessage("El password es obligatorio").bail()
-    .matches(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/).withMessage('Debe tener una mayúscula, minúscula, caracter especial y un número. Mínimo 8 caracteres'),
+    .matches(/^(?=(?:.*\d))(?=.*[A-Z])(?=.*[a-z])(?=.*[.,*!?¿¡/#$%&])\S{8,64}$/).withMessage('Debe tener una mayúscula, minúscula, caracter especial y un número. Mínimo 8 caracteres'),
   body("password2")
   .notEmpty().withMessage("Reingresá tu contraseña").bail()
   .custom((value, { req }) => {

@@ -39,4 +39,4 @@ app.use('/comments',commentsRoutes);
 app.use('/posts', postsRoutes)
 app.use('/users',usersRoutes);
 
-app.listen(PORT, () => 'Servidor corriendo en http://localhost:' + PORT)
+app.listen(PORT, () =>  console.log('Servidor corriendo en http://localhost:' + PORT));

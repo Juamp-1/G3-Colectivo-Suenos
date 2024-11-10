@@ -100,8 +100,9 @@ footer {
 	margin-top: 0%;
 }
 .footer-icons {
-    font-size: 24px; /* Tamaño por defecto de los íconos */
-}
+	width: 30px; /* Tamaño por defecto */
+	height: 30px; /* Tamaño por defecto */
+  }
 @media (max-width: 768px) {
     html {
         font-size: 10pt; /* Reducir el tamaño de fuente */
@@ -128,6 +129,8 @@ footer {
         padding: 5px 0; /* Reducir el padding del footer */
     }
 	.footer-icons {
-        font-size: 16px; /* Tamaño reducido de los íconos en dispositivos móviles */
-    }
+		width: 20px; 
+		height: 20px;
+		}
+		
 }

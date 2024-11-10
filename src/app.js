@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const app = express();
 const methodOverride = require('method-override')
 const session = require('express-session')
+const morgan = require('morgan')
+const connectDB = require("./config/connectDB.js");
+
 const PORT = 3000;
 
 const indexRoutes = require('./routes/index.routes');
@@ -23,6 +26,12 @@ app.set('views',path.join(__dirname, 'views'));
 //config recibir datos formularios
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}));
+
+//registro de peticiones por consola
+app.use(morgan('short'));
+
+//conexión con mongodb
+connectDB();
 
 app.use(methodOverride('_method'))
 

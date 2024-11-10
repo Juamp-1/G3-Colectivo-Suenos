@@ -23,6 +23,49 @@
                     </lord-icon></a>
                 </li>
 
+                <% if (locals.userLogin && locals.userLogin.rol=="admin" ) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin"><lord-icon
+                            src="https://cdn.lordicon.com/pflszboa.json"
+                            trigger="hover"
+                            colors="primary:#ffffff"
+                            alt="administrador"
+                            >
+                        </lord-icon></a>
+                    </li>
+                    <% } %>
+    
+                        <% if (locals.userLogin) { %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/users/profile"><lord-icon
+                                    src="https://cdn.lordicon.com/kthelypq.json"
+                                    trigger="hover"
+                                    colors="primary:#ffffff"
+                                    alt =" perfil"
+                                   ></a>
+                           
+                            </li>
+                            <% }else{ %>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/users/login"><lord-icon
+                                        src="https://cdn.lordicon.com/kthelypq.json"
+                                        trigger="hover"
+                                        colors="primary:#ffffff"
+                                        alt="iniciar sesion"
+                                       >
+                                    </lord-icon></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/users/register"><lord-icon
+                                        src="https://cdn.lordicon.com/vdjwmfqs.json"
+                                        trigger="hover"
+                                        colors="primary:#ffffff"
+                                        alt="registro"
+                                        >
+                                    </lord-icon></a>
+                                </li>
+                                <% } %>
+    
                 <li class="nav-item">
                     <a class="nav-link" href="#"><lord-icon
                         src="https://cdn.lordicon.com/lecprnjb.json"
@@ -40,49 +83,6 @@
                         colors="primary:#ffffff"
                         alt="ayuda">
                     </lord-icon></a>
-
-                    <% if (locals.userLogin && locals.userLogin.rol=="admin" ) { %>
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin"><lord-icon
-                        src="https://cdn.lordicon.com/pflszboa.json"
-                        trigger="hover"
-                        colors="primary:#ffffff"
-                        alt="administrador"
-                        >
-                    </lord-icon></a>
-                </li>
-                <% } %>
-
-                    <% if (locals.userLogin) { %>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/users/profile"><lord-icon
-                                src="https://cdn.lordicon.com/kthelypq.json"
-                                trigger="hover"
-                                colors="primary:#ffffff"
-                                alt =" perfil"
-                               ></a>
-                       
-                        </li>
-                        <% }else{ %>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/users/login"><lord-icon
-                                    src="https://cdn.lordicon.com/kthelypq.json"
-                                    trigger="hover"
-                                    colors="primary:#ffffff"
-                                    alt="iniciar sesion"
-                                   >
-                                </lord-icon></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/users/register"><lord-icon
-                                    src="https://cdn.lordicon.com/vdjwmfqs.json"
-                                    trigger="hover"
-                                    colors="primary:#ffffff"
-                                    alt="registro"
-                                    >
-                                </lord-icon></a>
-                            </li>
-                            <% } %>
 
 
         </div>

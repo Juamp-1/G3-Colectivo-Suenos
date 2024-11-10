@@ -271,7 +271,7 @@
 .donate-icon {
     position: fixed; /* Mantiene el icono en su lugar al hacer scroll */
     top: 80px; /* Ajusta según la altura de tu header */
-    right: 20px; /* Espacio desde el borde derecho */
+    right: 8vh; /* Espacio desde el borde derecho */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
@@ -298,6 +298,12 @@
 .donate-button {
     animation: pulse 2s infinite; /* Animación de pulso */
 }
+
+.section-founders .card-title{
+	color:var(--color-primary)
+}
+
+
 
 @keyframes pulse {
     0% {

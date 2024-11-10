@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<%- include('./partials/head',{ title : 'Fundacion Emperador' }) %>
+
+    <body>
+        <div class="container"> <!-- Contenedor ppal -->
+            <%- include('./partials/header') %>
+
+
+                <div class="container">
+                    <br>
+                    <h1 class="text-center">Fundacion Emperador</h1></br>
+                    <h2 class="text-center">Colectivo Sueños</h2>
+                    <h6 class="text-center">- Juntos en la dificultad - </h6>
+
+
+                    <section id="about" class="section about py-5 container">
+                      <div class="row">
+                        <% posts.forEach(post => { %>
+                            <div class="col-12 col-md-4 ">
+                                <div class="card position-relative" >
+                                    <span class="badge rounded text-bg-primary p-2" style="position: absolute; top: 10px; right: -5px;"><%= post.tag.name %></span>
+
+                                    <img src="https://fundacionemperador.org.ar/wp-content/uploads/2022/09/colectivo-suenos-300x225.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title text-uppercase"><%= post.title %></h5>
+                                    <p class="text-muted"><%= post.subtitle %></p>
+                                    <hr>
+                                      <p class="card-text"><%= post.description %></p>
+                                    </div>
+                                  </div>
+                            </div>
+                        <% }) %>
+                   
+                      </div>
+                    </section>
+
+
+                    <%- include('./partials/footer') %>
+
+                        <div class="donate-icon">
+                            <a href="https://fundacionemperador.mipago.coop/home/1" class="donate-button">
+                                <lord-icon src="https://cdn.lordicon.com/xyboiuok.json" trigger="morph"
+                                    state="morph-heart" colors="primary:#fff">
+                                </lord-icon></i> Donar
+                            </a>
+                        </div>
+    </body>
+
+</html>

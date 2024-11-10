@@ -1,1 +1,14 @@
-["en ejecución", "realizado", "proximamente"]
+[
+    {
+        "name" : "Realizado",
+        "icon" : "https://cdn.lordicon.com/hmzvkifi.json"
+    },
+    {
+        "name" : "En desarrollo",
+        "icon" : "https://cdn.lordicon.com/fwkrbvja.json"
+    },
+    {
+        "name" : "Proximamente",
+        "icon" : "https://cdn.lordicon.com/warimioc.json"
+    }
+]

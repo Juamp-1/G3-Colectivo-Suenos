@@ -1,10 +1,11 @@
 const express = require('express')
 const router = express.Router();
-const {add, create, detail, edit, update, list, destroy} = require('../controllers/postsController')
+const {add, create, detail, edit, update, list, destroy, index} = require('../controllers/postsController')
 
-// /comments
+// /posts
 
 router
+        .get('/',index)
         .get('/add',add)
         .post('/add', create)
         .get('/list',list)

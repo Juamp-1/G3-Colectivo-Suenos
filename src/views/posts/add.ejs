@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar publicación </title>
-</head>
-<body>
-    <h1>Agregar publicación</h1>
-</body>
+<html lang="es">
+
+
+<%- include('../partials/head',{ title : 'Administración' }) %>
+
+    <body>
+        <div class="container"> <!-- Contenedor ppal -->
+            <%- include('../partials/header') %>
+
+                <div class="container--admin">
+                    <%- include('../partials/aside-admin') %>
+
+                        <main class="main-content-admin">
+                            <section>
+                                <h2 class="mt-4">Nueva publicación</h2>
+                                <div class="rounded border p-3 col-12 col-md-8 mx-auto">
+                                    <form action="" method="POST">
+                                        <div class="mb-3">
+                                            <label for="title" class="form-label">Título</label>
+                                            <input type="text" class="form-control" id="title" placeholder="Título de la publicación" name="title">
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="subtitle" class="form-label">Bajada de título</label>
+                                            <input type="text" class="form-control" id="subtitle" placeholder="Breve descripción" name="subtitle">
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="subtitle" class="form-label">Clasificación</label>
+                                            <select class="form-select" name="tag">
+                                                <option selected hidden value="">Elija una opción...</option>
+                                                <% tags.forEach(tag => { %>
+                                                    <option value="<%= tag.id %>"><%= tag.name %></option>
+                                                <% }) %>
+                                              </select>
+                                          </div>
+                                          <div class="mb-3">
+                                            <label for="description" class="form-label">Descripción</label>
+                                            <textarea class="form-control" id="description" rows="3" placeholder="Cuerpo de la publicación" name="description"></textarea>
+                                          </div>
+                                          <div class="mb-3 d-flex justify-content-around">
+                                            <div>
+                                                <label for="btn-file" class="btn d-flex align-items-center">Subir imagen</label>
+                                                <input type="file" id="btn-file" name="image" hidden>
+                                            </div>
+                                                <button class="btn">Guardar cambios</button>
+                                          </div>
+                                    </form>
+                                </div>
+                            </section>
+                        </main>
+                </div>
+
+
+                <%- include('../partials/footer') %>
+
+
+    </body>
+
 </html>

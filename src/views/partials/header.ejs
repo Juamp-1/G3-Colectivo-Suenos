@@ -4,43 +4,87 @@
         <a class="navbar-brand logo" href="#">
             <img src="/img/icons/Logo-FE.svg" alt="logo">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/"> <img class="icono" src="/img/icons/home.svg" alt="icono home"></i></a>
-                    </li>
-                    <% if (locals.userLogin && locals.userLogin.rol == "admin") { %>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin"><img class="icono" src="/img/icons/admin.svg" alt="icono admin"></a>
-                    </li>
-                    <% } %>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><img class="icono" src="/img/icons/setting.svg" alt="icono config"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact"><img class="icono" src="/img/icons/help.svg" alt="icono contacto"></a>
-                    
-                
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/"> <lord-icon
+                        class="icono"
+                        src="https://cdn.lordicon.com/cnpvyndp.json"
+                        trigger="morph"
+                        colors="primary:#ffffff"
+                        state="morph-home-1"
+                        alt="pagina principal"
+                            >
+                    </lord-icon></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><lord-icon
+                        src="https://cdn.lordicon.com/lecprnjb.json"
+                        trigger="hover"
+                        colors="primary:#ffffff"
+                        alt="configuracion"
+                        >
+                    </lord-icon></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact"><lord-icon
+                        src="https://cdn.lordicon.com/axteoudt.json"
+                        trigger="hover"
+                        state="hover-help-center-2"
+                        colors="primary:#ffffff"
+                        alt="ayuda">
+                    </lord-icon></a>
+
+                    <% if (locals.userLogin && locals.userLogin.rol=="admin" ) { %>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin"><lord-icon
+                        src="https://cdn.lordicon.com/pflszboa.json"
+                        trigger="hover"
+                        colors="primary:#ffffff"
+                        alt="administrador"
+                        >
+                    </lord-icon></a>
+                </li>
+                <% } %>
+
                     <% if (locals.userLogin) { %>
                         <li class="nav-item">
-                            <a class="nav-link" href="/users/profile"><img class="icono" src="/img/icons/profile.svg" alt="icono perfil"></a>
-                        </li> <li class="nav-item">
-                            <a class="nav-link" href="/users/login"><img class="icono" src="/img/icons/logout.svg" alt="icono logout"></a>
+                            <a class="nav-link" href="/users/profile"><lord-icon
+                                src="https://cdn.lordicon.com/kthelypq.json"
+                                trigger="hover"
+                                colors="primary:#ffffff"
+                                alt =" perfil"
+                               ></a>
+                       
                         </li>
-                    <% }else{ %>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/users/login"><img class="icono" src="/img/icons/login.svg" alt="icono login"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/users/register"><img class="icono" src="/img/icons/register.svg" alt="icono registro"></a>
-                        </li>
-                    <% } %>
-                
-                
-            </div>
+                        <% }else{ %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/users/login"><lord-icon
+                                    src="https://cdn.lordicon.com/kthelypq.json"
+                                    trigger="hover"
+                                    colors="primary:#ffffff"
+                                    alt="iniciar sesion"
+                                   >
+                                </lord-icon></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/users/register"><lord-icon
+                                    src="https://cdn.lordicon.com/vdjwmfqs.json"
+                                    trigger="hover"
+                                    colors="primary:#ffffff"
+                                    alt="registro"
+                                    >
+                                </lord-icon></a>
+                            </li>
+                            <% } %>
+
+
+        </div>
     </nav>
 </header>

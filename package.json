@@ -12,9 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@lordicon/element": "^1.10.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
     "bootstrap": "^5.3.3",
+    "colectivo-suenos": "file:",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
     "express-session": "^1.18.1",

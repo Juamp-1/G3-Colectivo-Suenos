@@ -49,6 +49,7 @@
 }
 
 .navbar-nav .nav-item .icono {
+	color: #fff;
 	width: 30px;
 	/* Ajusta el tamaño según sea necesario */
 	height: 30px;

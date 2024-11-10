@@ -81,7 +81,7 @@
   text-decoration: underline;
 }
 
-.login-wrapper .btn{
+.login-wrapper > .btn{
   width: 100%;
   height: 45px;
   border: none;

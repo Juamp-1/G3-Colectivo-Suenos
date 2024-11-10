@@ -22,8 +22,16 @@
                             >
                     </lord-icon></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact"><lord-icon
+                        src="https://cdn.lordicon.com/axteoudt.json"
+                        trigger="hover"
+                        state="hover-help-center-2"
+                        colors="primary:#ffffff"
+                        alt="ayuda">
+                    </lord-icon></a>
 
-                <% if (locals.userLogin && locals.userLogin.rol=="admin" ) { %>
+                <% if (locals.userLogin && locals.userLogin.role=="admin" ) { %>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin"><lord-icon
                             src="https://cdn.lordicon.com/pflszboa.json"
@@ -44,6 +52,15 @@
                                     alt =" perfil"
                                    ></a>
                            
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/users/logout"><lord-icon
+                                    src="https://cdn.lordicon.com/gwvmctbb.json"
+                                    trigger="hover"
+                                    colors="primary:#ffffff, secondary:#ffffff"
+                                    alt="salir"
+                                    >
+                                </lord-icon></a>
                             </li>
                             <% }else{ %>
                                 <li class="nav-item">
@@ -66,24 +83,9 @@
                                 </li>
                                 <% } %>
     
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><lord-icon
-                        src="https://cdn.lordicon.com/lecprnjb.json"
-                        trigger="hover"
-                        colors="primary:#ffffff"
-                        alt="configuracion"
-                        >
-                    </lord-icon></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact"><lord-icon
-                        src="https://cdn.lordicon.com/axteoudt.json"
-                        trigger="hover"
-                        state="hover-help-center-2"
-                        colors="primary:#ffffff"
-                        alt="ayuda">
-                    </lord-icon></a>
-
+             
+            
+                 
 
         </div>
     </nav>

@@ -3,10 +3,12 @@ const {getData} = require('../data')
 const users = getData('users.json')
 
 module.exports = [
-  check("name")
+  check("username")
     .notEmpty()
-    .withMessage("El nombre es obligatorio").bail()
-    .isAlpha()
+    .withMessage("El nombre de usuario es obligatorio").bail()
+    .isAlpha('es-ES',{
+      ignore : " "
+    })
     .withMessage("Solo caracteres alfabéticos"),
   body("email")
     .notEmpty()

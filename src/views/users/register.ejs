@@ -17,9 +17,9 @@
                                         <form class="access-form" method="POST"> <!--Abre formulario -->
                           <!-- input Nombre -->
                                 <div class="field-group">
-                                    <label for="name">Nombre</label>
-                                    <input type="text" id="name" name="name" placeholder="Ingresá tu nombre" value="<%= locals.old && old.name ? old.name : null %>" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>">
-                                    <small id="name-error" class="text-danger ms-2" ><%= (locals.errors && errors.name) ? errors.name.msg : null %></small>
+                                    <label for="username">Nombre de usuario</label>
+                                    <input type="text" id="username" name="username" placeholder="Ingresá tu nombre" value="<%= locals.old && old.username ? old.username : null %>" class="form-control <%= locals.errors && errors.username ? 'is-invalid' : null %>">
+                                    <small id="username-error" class="text-danger ms-2" ><%= (locals.errors && errors.username) ? errors.username.msg : null %></small>
     
                                 </div>
                           <!-- input Email -->

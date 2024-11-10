@@ -1,62 +1,81 @@
 const {validationResult} = require('express-validator');
 const {hashSync, compareSync} = require('bcryptjs');
 const { getData, storeData } = require("../data");
+const User = require('../models/User.js');
 
 module.exports = {
     register : (req,res) => {
         return res.render('users/register')
     },
-    processRegister : (req,res) => {
+    processRegister : async (req,res) => {
 
         const errors = validationResult(req);
-        const {name, email, password} = req.body;
-        const users = getData('users.json');
 
-        if(errors.isEmpty()){
-            const newUser = {
-                id: +users[users.length - 1].id + 1,
-                name,
-                email,
-                password : hashSync(password, 12),
-                rol : 'user'
+        try {
+            const {username, email, password} = req.body;
+            if(errors.isEmpty()){
+
+
+                const newUser = new User({
+                    username,
+                    email,
+                    password : hashSync(password, 12),
+                    role : "user"
+                })
+
+                await newUser.save()
+    
+                return res.redirect('/users/login')
+            }else {
+                console.log(errors)
+                return res.render('users/register',{
+                    old : req.body,
+                    errors : errors.mapped()
+                })
             }
-
-            users.push(newUser);
-
-            storeData(users, 'users.json')
-            return res.redirect('/users/login')
-        }else {
-            return res.render('users/register',{
-                old : req.body,
-                errors : errors.mapped()
-            })
+            
+        } catch (error) {
+            console.log(error)
+            return res.redirect('/error')
         }
+
     },
     login : (req,res) => {
 
         return res.render('users/login')
     },
-    processLogin : (req,res) => {
-        const users = getData('users.json');
-        const {email, pass} = req.body;        
+    processLogin : async (req,res) => {
 
-        const user = users.find(user => user.email == email)
-        
-        if(user && compareSync(pass, user.password)) {
+        try {
+            const {email, password} = req.body;        
 
-            req.session.userLogin = {
-                id : user.id,
-                name : user.name,
-                rol : user.rol
-            }
-            if (user.rol == "admin" ){
-                return res.redirect('/admin')
-            }
-        }else {
-            return res.render('users/login',{
-                msg : "Credenciales inválidas"
+            const user = await User.findOne({
+                email
             })
+            
+            if(user && compareSync(password, user.password)) {
+    
+                req.session.userLogin = {
+                    id : user.id,
+                    name : user.username,
+                    role : user.role
+                }
+
+                if (user.role == "admin" ){
+                    return res.redirect('/admin')
+                }
+
+                return res.redirect('/')
+            }else {
+                return res.render('users/login',{
+                    msg : "Credenciales inválidas"
+                })
+            }
+        } catch (error) {
+            console.log(error)
+            return res.redirect('/error')
         }
+      
     },
     forgot : (req,res) => {
 

@@ -99,7 +99,9 @@ footer {
 .h3-footer{
 	margin-top: 0%;
 }
-
+.footer-icons {
+    font-size: 24px; /* Tamaño por defecto de los íconos */
+}
 @media (max-width: 768px) {
     html {
         font-size: 10pt; /* Reducir el tamaño de fuente */
@@ -124,5 +126,8 @@ footer {
     footer {
         width: 95%; /* Ajustar el ancho del footer */
         padding: 5px 0; /* Reducir el padding del footer */
+    }
+	.footer-icons {
+        font-size: 16px; /* Tamaño reducido de los íconos en dispositivos móviles */
     }
 }

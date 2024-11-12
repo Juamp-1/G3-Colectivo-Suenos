@@ -31,10 +31,11 @@ header {
 }
 
 body {
-	background-image: url(../img/colectivo.jpg);
+	background-color: var(--color-primary);
+	/*background-image: url(../img/colectivo.jpg);*/
 	background-size: cover;
 	background-position: right;
-	color: #444;
+	color: #cacaca;
 	font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	
 	color: #333;
@@ -97,13 +98,8 @@ footer {
 	padding: auto 0;
 	box-shadow: 0 4px 8px rgba(36, 30, 30, 0.2);
 }
-.h3-footer{
-	margin-top: 0%;
-}
-.footer-icons {
-	width: 30px; /* Tamaño por defecto */
-	height: 30px; /* Tamaño por defecto */
-  }
+
+
 @media (max-width: 768px) {
     html {
         font-size: 10pt; /* Reducir el tamaño de fuente */
@@ -129,9 +125,6 @@ footer {
         width: 95%; /* Ajustar el ancho del footer */
         padding: 5px 0; /* Reducir el padding del footer */
     }
-	.footer-icons {
-		width: 20px; 
-		height: 20px;
-		}
+	
 		
 }

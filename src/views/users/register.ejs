@@ -7,22 +7,57 @@
 	}) %>
 	<body class="register-body">
 		<div class="container"> <!-- Contenedor ppal -->
-			<%- include('../partials/header') %> <form method="POST">
+			<%- include('../partials/header') %> 
+            <!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+</head>
+<body>
+    <main class="main-login">
+        <div class="login-wrapper">
+            <form action="/register" method="POST">
+                <h1>Registrarse</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Nombre de usuario" name="username" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Contraseña" name="password" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Confirmar contraseña" name="confirm_password" required>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Recordarme</label>
+                    <a href="/login">¿Ya tienes una cuenta?</a>
+                </div>
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+            <div class="register-link">
+                <p>No tengo una cuenta. <a href="/login">Iniciar sesión</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+            
+<!--
+            <form method="POST">
                <div class="register-main-content">
-                <main class="card" style="max-width: 600px;"> <!-- Cuerpo principal del sitio -->
+                <main class="card" style="max-width: 600px;"> 
                     <section class="card-header">
                         Registrate
                     </section>		
                     <section class="card-body">
-                                        <form class="access-form" method="POST"> <!--Abre formulario -->
-                          <!-- input Nombre -->
+                                        <form class="access-form" method="POST">
+                        
                                 <div class="field-group">
-                                    <label for="username">Nombre de usuario</label>
-                                    <input type="text" id="username" name="username" placeholder="Ingresá tu nombre" value="<%= locals.old && old.username ? old.username : null %>" class="form-control <%= locals.errors && errors.username ? 'is-invalid' : null %>">
-                                    <small id="username-error" class="text-danger ms-2" ><%= (locals.errors && errors.username) ? errors.username.msg : null %></small>
+                                    <label for="name">Nombre</label>
+                                    <input type="text" id="name" name="name" placeholder="Ingresá tu nombre" value="<%= locals.old && old.name ? old.name : null %>" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>">
+                                    <small id="name-error" class="text-danger ms-2" ><%= (locals.errors && errors.name) ? errors.name.msg : null %></small>
     
                                 </div>
-                          <!-- input Email -->
+                         
                           <div class="field-group">
                               <label for="email">Email</label>
                                     <input type="text" id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" name="email" placeholder="Ingresá tu email" value="<%= locals.old && old.email ? old.email : null %>">
@@ -53,13 +88,15 @@
                                 </div>
     
                           
-                          <button type="submit"><strong>Registrarme</strong></button>
+                          <button class="btn" type="submit"><strong>Registrarme</strong></button>
     
                         </form>
                     </section>
                 </main>
             </div>
         </div>
+   -->
+        
 <%- include('../partials/footer') %>
 
 </body>

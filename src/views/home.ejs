@@ -15,29 +15,31 @@
   <h2 class="text-center">Colectivo Sueños</h2>
   <h6 class="text-center">- Juntos en la dificultad - </h6>
  
-<section id="info" class="section info py-5">
+<section id="info" class="section-info py-5">
 
 
     <div class="row">
-      <div data-aos="fade-right" class="col-md-6">
+      <div data-aos="fade-right" data-aos-duration="1000" class="col-md-6">
         <h3>¿Quiénes somos?</h3>
         <p>La Fundación Emperador es una organización dedicada a mejorar la calidad de vida de las personas electrodependientes y sus familias a través de proyectos comunitarios y de apoyo social.</p>
       </div>
-      <div data-aos="fade-left" class="col-md-6">
+      <div data-aos="fade-left" data-aos-duration="1000" class="col-md-6">
         <h3>Nuestra Misión</h3>
         <p>Fomentar la inclusión y el bienestar de las personas electrodependientes, garantizando su acceso a recursos y espacios de esparcimiento.</p>
       </div>
     </div>
-    <div data-aos="fade-up">
+    <div data-aos="fade-up" data-aos-duration="1000">
       <a  href="mailto:fundacionemperador@gmail.com"><button type="button" class="btn btn-primary">Contáctanos para más información</button></a>
     </div>
   </div>
 </section>
+
+
 <section id="about" class="section about py-5">
   <div class="container">
     <h2 class="text-center">Un Sueño Colectivo</h2>
     <p class="text-center">Este proyecto busca empoderar a personas electrodependientes y sus familias, fomentando la empatía y el trabajo comunitario.</p>
-    <div data-aos="fade-up" class="text-center"> <!-- Contenedor para centrar el video -->
+    <div data-aos="fade-up" data-aos-duration="1000" class="text-center"> <!-- Contenedor para centrar el video -->
       <iframe width="560" height="315" src="https://www.youtube.com/embed/F1UEzFTPtuc?si=z_ulyKs2eAsZAeey" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </div>
@@ -157,19 +159,19 @@
 
   <section id="founders" class="section-founders py-5">
     <div class="container">
-        <h2 class="text-center " >Nuestros Fundadores</h2>
+        <h2 data-aos="fade-down" class="text-center" >Nuestros Fundadores</h2>
         <div class="row mt-4">
-            <div class="col-md-6 d-flex justify-content-center">
+            <div data-aos="zoom-out-left" class="col-md-6 d-flex justify-content-center">
                 <div class="card" style="width: 90%;">
                     <img src="/img/fabi.jpg" class="card-img-top" alt="Fabian Fiori" style="object-fit: cover; height: 200px;">
-                    <div class="card-body text-center">
+                    <div  class="card-body text-center">
                         <h5 class="card-title" >FABIAN FIORI</h5>
                         <h6 class="card-subtitle mb-2 text-muted" style="font-style: italic;">(FUNDADOR)</h6>
                         <p class="card-text" style="font-style: italic;">“Cierro los ojos y revivo el mismo pensamiento que inundaba mi cabeza cada vez que una autoridad o funcionario me preguntaba 'dígame… ¿Qué necesita su hijo?'. En ese instante llegaba la respuesta. Lo que mi hijo necesita también lo necesitan los hijos de muchos otros. Hoy esa idea se convirtió en la matriz sagrada, en la estructura para comenzar (y terminar) todas las acciones que emprendemos. Pensando colectivamente y sumando voluntades, multiplicamos los resultados y hacemos del trabajo grupal un verdadero placer.”</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 d-flex justify-content-center">
+            <div data-aos="zoom-out-right" class="col-md-6 d-flex justify-content-center">
                 <div class="card" style="width: 90%;">
                     <img src="/img/rosana.jpg" class="card-img-top" alt="Rosana Balsamello" style="object-fit: cover; height: 200px;">
                     <div class="card-body text-center">
@@ -240,17 +242,7 @@
 </section>
 
   <%- include('./partials/footer') %>
-
-  <div class="donate-icon">
-    <a href="https://fundacionemperador.mipago.coop/home/1" class="donate-button">
-      <lord-icon
-    src="https://cdn.lordicon.com/xyboiuok.json"
-    trigger="morph"
-    state="morph-heart"
-    colors="primary:#fff"
-    >
-</lord-icon></i> Donar
-    </a>
+  <%- include('./partials/donate') %>
 </div>
 </body>
 </html>

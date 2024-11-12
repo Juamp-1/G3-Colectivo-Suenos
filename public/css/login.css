@@ -7,8 +7,9 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url("/img/img.jpg");
-
+    background: linear-gradient(to right,#308aff,  var(--color-primary)); 
+ 
+   
 
 }
 
@@ -17,9 +18,10 @@
   background: transparent;
   border: 2px solid rgba(255, 255, 255, .2);
   backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba (0,0,0 .2);
+  box-shadow: 4px 4px #a5a5a5;
+  /*box-shadow: 0 0 10px rgba (0,0,0 .2);*/
   color: #fff;
-  border-radius: 10px;
+  border-radius: 13px;
   padding: 30px 40px;
 }
 
@@ -41,7 +43,7 @@
   background: transparent;
   border: none;
   outline: none;
-  border: 2px solid rgba(255, 255, 255, .2);
+  border: 5px solid rgba(255, 255, 255, .2);
   border-radius: 40px;
   font-size: 16px;
   color: #fff;

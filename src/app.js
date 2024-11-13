@@ -33,6 +33,7 @@ app.use(morgan('short'));
 //conexión con mongodb
 connectDB();
 
+
 app.use(methodOverride('_method'))
 
 app.use(session({

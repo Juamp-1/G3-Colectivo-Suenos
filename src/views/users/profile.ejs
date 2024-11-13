@@ -26,23 +26,25 @@
         <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">
                 <h3 class="titulo">Nombre de Usuario</h3>
-                
-            </div>
-            <div class="perfil-usuario-footer">
-                <ul class="lista-datos">
-                    <li><i class="icono fas fa-map-signs"></i> Nombre y apellido:</li>
-                    <li><i class="icono fas fa-phone-alt"></i> Telefono:</li>
-                    <li><i class="icono fas fa-briefcase"></i> Aportes</li>
-                
-                </ul>
-                <ul class="lista-datos">
-                    <li><i class="icono fas fa-map-marker-alt"></i> Direccion de Usuario</li>
-                    <li><i class="icono fas fa-calendar-alt"></i> Fecha de Ingreso.</li>
-                    <li><i class="icono fas fa-user-check"></i>Registro.</li>
-                    <li><i class="icono fas fa-share-alt"></i> Redes sociales.</li>
-                    <li><i class="icono fas fa-solid fa-hand-holding-dollar"></i>Donaciones </li>
-                </ul>
-            </div>
+                <div class="perfil-usuario-footer">
+                    <ul class="lista-datos" style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                        <li style="display: flex; align-items: center; margin: 5px 0;">
+                            <i class="icono fas fa-map-signs" style="margin-right: 8px;"></i> Nombre y apellido: Juan Mewing
+                        </li>
+                        <li style="display: flex; align-items: center; margin: 5px 0;">
+                            <i class="icono fas fa-phone-alt" style="margin-right: 8px;"></i> Telefono: +123456789
+                        </li>
+                        <li style="display: flex; align-items: center; margin: 5px 0;">
+                            <i class="icono fas fa-solid fa-hand-holding-dollar" style="margin-right: 8px;"></i> Donaciones: $100
+                        </li>
+                        <li style="display: flex; align-items: center; margin: 5px 0;">
+                            <i class="icono fas fa-calendar-alt" style="margin-right: 8px;"></i> Fecha de Ingreso: 01/01/2023
+                        </li>
+                        <li style="display: flex; align-items: center; margin: 5px 0;">
+                            <i class="icono fas fa-share-alt" style="margin-right: 8px;"></i> Redes sociales: @usuario
+                        </li>
+                    </ul>
+                </div>
             <div class="redes-sociales">
                 <a href="" class="boton-redes facebook fab fa-facebook-f"><i class="icon-facebook"></i></a>
                 <a href="" class="boton-redes twitter fab fa-twitter"><i class="icon-twitter"></i></a>
@@ -50,36 +52,100 @@
             </div>
         </div>
     </section>
+    
     <section>
-        <div class="seccion-informacion-adicional">
-            <h2 class="subtitulo">Información Adicional</h2>
-            <div class="perfil-container">
+    <div class="seccion-informacion-adicional"> <!-- Color verde muy claro -->
+        <h2 class="subtitulo">Información Adicional</h2>
+        <div class="perfil-container">
+            <div class="perfil-izquierda">
                 <div class="informacion-perfil">
                     <img src="/img/rosana.jpg" alt="Perfil 1" class="imagen-perfil">
-                    <div class="nombre-apellido">
-                        <span class="nombre">Juan</span>
-                        <span class="apellido">Mewing</span>
-                    </div>
+                    <span class="nombre">Usuario 1</span>
                 </div>
                 <div class="informacion-perfil">
                     <img src="/img/fabi.jpg" alt="Perfil 2" class="imagen-perfil">
-                    <div class="nombre-apellido">
-                        <span class="nombre">Rodrigo</span>
-                        <span class="apellido">Se porta mal</span>
-                    </div>
+                    <span class="nombre">Usuario 2</span>
                 </div>
                 <div class="informacion-perfil">
                     <img src="/img/rosana.jpg" alt="Perfil 3" class="imagen-perfil">
-                    <div class="nombre-apellido">
-                        <span class="nombre">Alex</span>
-                        <span class="apellido">Viene tarde</span>
-                    </div>
+                    <span class="nombre">Usuario 3</span>
                 </div>
-                <!-- Puedes añadir más perfiles aquí -->
-                <button class="boton-anadir-perfil">Añadir perfil</button>
+                <div class="informacion-perfil">
+                    <img src="/img/fabi.jpg" alt="Perfil 4" class="imagen-perfil">
+                    <span class="nombre">Usuario 4</span>
+                </div>
+                <!-- Agrega más usuarios si es necesario -->
+            </div>
+            <div class="perfil-derecha">
+                <div class="informacion-perfil">
+                    <img src="/img/rosana.jpg" alt="Perfil 5" class="imagen-perfil">
+                    <span class="nombre">Usuario 5</span>
+                </div>
+                <div class="informacion-perfil">
+                    <img src="/img/fabi.jpg" alt="Perfil 6" class="imagen-perfil">
+                    <span class="nombre">Usuario 6</span>
+                </div>
+                <div class="informacion-perfil">
+                    <img src="/img/rosana.jpg" alt="Perfil 7" class="imagen-perfil">
+                    <span class="nombre">Usuario 7</span>
+                </div>
             </div>
         </div>
-    </section>
+        <button class="boton-anadir-perfil">Añadir perfil</button>
+    </div>
+</section>
+
+<style>
+    .seccion-informacion-adicional {
+        background-color: #d5f5e3; /* Color verde muy claro */
+        padding: 20px; /* Espaciado interno */
+        border-radius: 8px; /* Bordes redondeados */
+        max-width: 800px; /* Ancho máximo para la sección */
+        margin: auto; /* Centra la sección */
+        max-height: 400px; /* Altura máxima para permitir el desplazamiento */
+        overflow-y: auto; /* Habilita el desplazamiento vertical */
+    }
+    .perfil-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .perfil-izquierda, .perfil-derecha {
+        width: 48%; /* Ajusta el ancho según sea necesario */
+    }
+    .informacion-perfil {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+    .nombre {
+        margin-left: 10px; /* Espacio entre la imagen y el nombre */
+        font-size: 18px; /* Tamaño del texto */
+    }
+    .imagen-perfil {
+        width: 50px; /* Tamaño de la imagen */
+        height: 50px; /* Tamaño de la imagen */
+        border-radius: 50%; /* Hace la imagen redonda */
+    }
+    .boton-anadir-perfil {
+        display: block;
+        margin-top: 20px; /* Espacio superior */
+        float: right; /* Ubica el botón a la derecha */
+        background-color: #4CAF50; /* Color de fondo verde */
+        color: white; /* Color del texto */
+        border: none; /* Sin borde */
+        border-radius: 5px; /* Bordes redondeados */
+        padding: 10px 20px; /* Espaciado interno */
+        font-size: 16px; /* Tamaño de la fuente */
+        cursor: pointer; /* Cambia el cursor al pasar el mouse */
+        transition: background-color 0.3s; /* Transición suave para el hover */
+    }
+    .boton-anadir-perfil:hover {
+        background-color: #45a049; /* Color de fondo al pasar el mouse */
+    }
+</style>
+   
+    
 
 <%- include('../partials/footer') %>
 <%- include('../partials/donate') %>

@@ -229,8 +229,9 @@
 
 
 .btn {
-	padding: 0.25rem 0.5rem; /* Ajusta el padding según sea necesario */
-    width: auto;
+	padding: 0.25rem 0.5rem;
+	/* Ajusta el padding según sea necesario */
+	width: auto;
 	/* Ajusta el padding */
 	white-space: nowrap;
 	/* Evita que el texto se divida */
@@ -249,9 +250,9 @@
 .btn:hover {
 	/* Cambio de color al pasar el mouse por encima */
 	background-color: #61d2d2;
-	
+
 	/* Animación simple al pasar el mouse por encima */
-	
+
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -262,63 +263,83 @@
 }
 
 .logo {
-    transition: transform 0.3s ease-in-out; /* Tiempo de transición al agrandarse */
+	transition: transform 0.3s ease-in-out;
+	/* Tiempo de transición al agrandarse */
 }
 
 .logo:hover {
-    transform: scale(1.85); /* Agrandar el logo al pasar el mouse */
+	transform: scale(1.85);
+	/* Agrandar el logo al pasar el mouse */
 }
 
 .logo:not(:hover) {
-    transition: transform 0.9s ease-in-out; /* Tiempo de transición al volver a su tamaño original */
+	transition: transform 0.9s ease-in-out;
+	/* Tiempo de transición al volver a su tamaño original */
 }
 
 .donate-icon {
-    position: fixed; /* Mantiene el icono en su lugar al hacer scroll */
-    top: 80px; /* Ajusta según la altura de tu header */
-    right: 8vh; /* Espacio desde el borde derecho */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+	position: fixed;
+	/* Mantiene el icono en su lugar al hacer scroll */
+	top: 80px;
+	/* Ajusta según la altura de tu header */
+	right: 8vh;
+	/* Espacio desde el borde derecho */
+	z-index: 1000;
+	/* Asegura que esté por encima de otros elementos */
 }
 
 .donate-button {
-    display: flex;
-    align-items: center;
-    background-color: #007bff; /* Color de fondo */
-    color: white; /* Color del texto */
-    padding: 10px 15px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    text-decoration: none; /* Quita el subrayado */
-    transition: background-color 0.3s; /* Transición suave para el hover */
+	display: flex;
+	align-items: center;
+	background-color: #007bff;
+	/* Color de fondo */
+	color: white;
+	/* Color del texto */
+	padding: 10px 15px;
+	/* Espaciado interno */
+	border-radius: 5px;
+	/* Bordes redondeados */
+	text-decoration: none;
+	/* Quita el subrayado */
+	transition: background-color 0.3s;
+	/* Transición suave para el hover */
 }
 
 .donate-button:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+	background-color: #0056b3;
+	/* Color de fondo al pasar el mouse */
 }
 
 .donate-button i {
-    margin-right: 5px; /* Espacio entre el icono y el texto */
-    font-size: 1.2em; /* Tamaño del icono */
+	margin-right: 5px;
+	/* Espacio entre el icono y el texto */
+	font-size: 1.2em;
+	/* Tamaño del icono */
 }
 
 .donate-button {
-    animation: pulse 2s infinite; /* Animación de pulso */
+	animation: pulse 2s infinite;
+	/* Animación de pulso */
 }
 
-.section-founders .card-title{
-	color:var(--color-primary)
+.section-founders .card-title {
+	color: var(--color-primary)
 }
 
 
-.h3-footer{
+.h3-footer {
 	margin-top: 0%;
 }
+
 .footer-icons {
-	width: 30px; /* Tamaño por defecto */
-	height: 30px; /* Tamaño por defecto */
+	width: 30px;
+	/* Tamaño por defecto */
+	height: 30px;
+	/* Tamaño por defecto */
 }
 
 
-.section-goals{
+.section-goals {
 	background-image: url(/img/colectivo.jpg);
 	background-size: cover;
 }
@@ -333,53 +354,193 @@
 
 a {
 	text-decoration: none;
-  }
-  .scroll-up {
-    display: block; /* Ocultar por defecto */
-    position: fixed; /* Asegúrate de que esté fijo */
-    right: 3rem;
-    bottom: 3rem; /* Ajusta según sea necesario */
-    z-index: 10;
-    width: 32px;
-    height: 32px;
-    border-radius: 4px;
-    background-color: rgba(29, 29, 31, 0.7);
-    backdrop-filter: saturate(180%) blur(20px);
-    transition: opacity 0.4s ease, visibility 0.4s ease; /* Transición para fade */
-    opacity: 0; /* Comienza completamente transparente */
-    visibility: hidden; /* Oculta el elemento */
 }
-  .scroll-up:hover {
-	transform: translateY(-.30rem);
-  }
-  
-  /* Show scroll-up */
-  ._show-scroll {
+
+.scroll-up {
+	display: block;
+	/* Ocultar por defecto */
+	position: fixed;
+	/* Asegúrate de que esté fijo */
+	right: 3rem;
 	bottom: 3rem;
-  }
-  
-  @media (max-width: 1199.98px) {
+	/* Ajusta según sea necesario */
+	z-index: 10;
+	width: 32px;
+	height: 32px;
+	border-radius: 4px;
+	background-color: rgba(29, 29, 31, 0.7);
+	backdrop-filter: saturate(180%) blur(20px);
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+	/* Transición para fade */
+	opacity: 0;
+	/* Comienza completamente transparente */
+	visibility: hidden;
+	/* Oculta el elemento */
+}
+
+.scroll-up:hover {
+	transform: translateY(-.30rem);
+}
+
+/* Show scroll-up */
+._show-scroll {
+	bottom: 3rem;
+}
+
+.section-welcome {
+	position: relative;
+	/* Asegura que el z-index funcione */
+	z-index: 1;
+	/* Establece un z-index para que esté por encima de otras secciones */
+	height: 100vh;
+	/* O la altura que desees */
+	background-image: url(/img/protesta.png);
+	/* Ruta a tu imagen */
+	background-size: cover;
+	/* Cubre toda la sección */
+	background-position: center;
+	background-color: rgb(246, 246, 246);
+	padding: 20px;
+	/* Centra la imagen */
+	text-align: center;
+}
+
+.container-welcome {
+	position: relative;
+	/* Para asegurar que el contenido esté por encima de la imagen */
+	z-index: 2;
+	/* Asegura que el contenido esté por encima de la imagen de fondo */
+	display: flex;
+
+	padding: 20px;
+	/* Espaciado interno */
+	max-width: 800px;
+	/* Limita el ancho del contenedor */
+	margin: 0 auto;
+	/* Centra el contenedor */
+	text-align: center;
+
+	flex-direction: column;
+	/* Alinea los elementos en una columna */
+	align-items: center;
+}
+
+
+
+.section:last-child {
+	margin-bottom: 0;
+	/* Elimina el margen inferior en la última sección */
+}
+
+.title-home {
+	padding-bottom: 10vh;
+}
+
+.section-info article{
+	
+}
+.section-info h3{
+	color: #FFFFFF ;
+}
+
+
+.info-box {
+	backdrop-filter: blur(20px);
+	border: 1px solid #ccc;
+	/* Borde azul */
+	border-radius: 8px;
+	/* Bordes redondeados */
+	padding: 20px;
+	/* Espaciado interno */
+	text-align: center;
+	/* Centrar texto */
+	width: 100%;
+	/* Ancho completo */
+	max-width: 400px;
+	/* Ancho máximo para que no se extienda demasiado */
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	/* Sombra para efecto de profundidad */
+	background: transparent;
+}
+
+
+/* Estilos para la tabla de contenido */
+#table-of-contents {
+    background-color: #f8f9fa; /* Color de fondo opcional */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto de profundidad */
+    display: inline-block; /* Ajusta el tamaño a solo el texto */
+}
+
+.section-content h2 {
+    color: #333; /* Color del título más oscuro */
+}
+
+.accordion-button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    font-size: 1.25rem; /* Tamaño de fuente más grande */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+.accordion-body {
+    background-color: #f8f9fa; /* Color de fondo del cuerpo del acordeón */
+    font-size: 1.1rem; /* Tamaño de fuente más grande */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+}
+
+.accordion-body a {
+    color: #333; /* Color del texto más oscuro */
+    display: block; /* Para que el enlace ocupe todo el ancho */
+    padding: 5px 0; /* Espaciado interno entre enlaces */
+}
+
+.accordion-body a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+.banner {
+    position: relative; /* Posicionamiento relativo para la sección */
+    width: 100vw; /* Ancho completo de la ventana del navegador */
+    overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
+    margin-left: calc(-50vw + 50%); /* Ajusta el margen para centrar la sección */
+}
+
+.banner img {
+    width: 100%; /* Ancho completo de la sección */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Elimina el espacio en la parte inferior de la imagen */
+}
+
+@media (max-width: 1199.98px) {
 	.scroll-up {
-	  right: 1rem;
+		right: 1rem;
 	}
-  }
+}
 
 /*KeyFrames Animations*/
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
+
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-10px);
+	}
+
+	60% {
+		transform: translateY(-5px);
+	}
 }
 
 .bounce {
-    animation: bounce 0.5s;
+	animation: bounce 0.5s;
 }
 
 @-webkit-keyframes slide-fwd-center {
@@ -407,26 +568,29 @@ a {
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 
@@ -444,15 +608,15 @@ a {
 @media(max-width: 768px) {
 
 	.footer-icons {
-		width: 20px; 
+		width: 20px;
 		height: 20px;
 	}
 
 
 	.donate-icon {
-  	right: 16vh; /* Espacio desde el borde derecho */
-    
-}
+		right: 16vh;
+		/* Espacio desde el borde derecho */
+
+	}
 
 }
-

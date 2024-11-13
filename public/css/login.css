@@ -7,10 +7,8 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to right,#308aff,  var(--color-primary)); 
- 
-   
-
+    background: linear-gradient(var(--e-global),  var(--color-primary)); 
+  
 }
 
 .login-wrapper{
@@ -18,8 +16,8 @@
   background: transparent;
   border: 2px solid rgba(255, 255, 255, .2);
   backdrop-filter: blur(20px);
-  box-shadow: 4px 4px #a5a5a5;
-  /*box-shadow: 0 0 10px rgba (0,0,0 .2);*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.527);
+  
   color: #fff;
   border-radius: 13px;
   padding: 30px 40px;

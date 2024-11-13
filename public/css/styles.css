@@ -3,10 +3,7 @@
 @import url("/css/forms.css");
 @import url("/css/login.css");
 @import url("/css/profile.css");
-@import url("/css/register.css");
-@import url("/css/forgot.css");
 @import url("/css/socials.css");
-@import url("/css/style.css");
 @import url("/css/detail.css");
 
 
@@ -264,9 +261,16 @@
 	margin-left: 20px;
 }
 
-.logo img:hover {
-	transform: scale(2);
-	transition: all 1s ease-in-out;
+.logo {
+    transition: transform 0.3s ease-in-out; /* Tiempo de transición al agrandarse */
+}
+
+.logo:hover {
+    transform: scale(1.85); /* Agrandar el logo al pasar el mouse */
+}
+
+.logo:not(:hover) {
+    transition: transform 0.9s ease-in-out; /* Tiempo de transición al volver a su tamaño original */
 }
 
 .donate-icon {
@@ -325,8 +329,58 @@
 
 }
 
+
+
+a {
+	text-decoration: none;
+  }
+  .scroll-up {
+    display: block; /* Ocultar por defecto */
+    position: fixed; /* Asegúrate de que esté fijo */
+    right: 3rem;
+    bottom: 3rem; /* Ajusta según sea necesario */
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: rgba(29, 29, 31, 0.7);
+    backdrop-filter: saturate(180%) blur(20px);
+    transition: opacity 0.4s ease, visibility 0.4s ease; /* Transición para fade */
+    opacity: 0; /* Comienza completamente transparente */
+    visibility: hidden; /* Oculta el elemento */
+}
+  .scroll-up:hover {
+	transform: translateY(-.30rem);
+  }
+  
+  /* Show scroll-up */
+  ._show-scroll {
+	bottom: 3rem;
+  }
+  
+  @media (max-width: 1199.98px) {
+	.scroll-up {
+	  right: 1rem;
+	}
+  }
+
 /*KeyFrames Animations*/
 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.bounce {
+    animation: bounce 0.5s;
+}
 
 @-webkit-keyframes slide-fwd-center {
 	0% {
@@ -379,7 +433,7 @@
 /*Media Query*/
 
 
-@media(max-width: 1100px, min-width: 769px) {
+@media(max-width: 1100px) {
 	.wrapper {
 		width: min(600px, 100%);
 		border-radius: 0;
@@ -396,10 +450,8 @@
 
 
 	.donate-icon {
-    position: fixed; /* Mantiene el icono en su lugar al hacer scroll */
-    top: 80px; /* Ajusta según la altura de tu header */
-    right: 16vh;; /* Espacio desde el borde derecho */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  	right: 16vh; /* Espacio desde el borde derecho */
+    
 }
 
 }

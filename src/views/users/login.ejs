@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-    
 
-	<%- include('../partials/head',{
-		title : 'iniciar Sesión'
-	}) %>
-	<body>
-		<div class="container"> <!-- Contenedor ppal -->
-			<%- include('../partials/header') %>
 
-          <main class="main-login">  
-<div class="login-wrapper">
-    <form  action="">
-        <h1> Inicio de sesión</h1>
-        <div class="input-box">
-            <input type="text" placeholder="Nombre de Usuario"
-            required>
-            <i class='bx bxs-user'></i>
-            </div>
-            <div class="input-box">
-                <input type="password"
-                placeholder="Contraseña" required>
-                <i class='bx bxs-lock-alt'></i>
-            </div>
+<%- include('../partials/head',{ title : 'iniciar Sesión' }) %>
 
-            <div class="remember-forgot">
-                <label><input type="checkbox"> Recuerdame</label>
-                <a href="/users/forgot">Olvidaste tu contraseña?</a>
-            </div>
+    <body>
+        <div class="container"> <!-- Contenedor ppal -->
+            <%- include('../partials/header') %>
 
-            <button type="submit" class="btn" >Iniciar</button>
+                <main class="main-login">
+                    <div class="login-wrapper">
+                        <form action="">
+                            <h1> Inicio de sesión</h1>
+                            <div class="input-box">
+                                <input type="text" placeholder="Usuario o Email" required>
+                                <i class='bx bxs-user'></i>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" placeholder="Contraseña" required>
+                                <i class='bx bxs-lock-alt'></i>
+                            </div>
 
-            <div class="register-link">
-                <p> No tengo una cuenta? <a
-                href="/users/register">Registrate</a></p>
-            </div>
+                            <div class="remember-forgot">
+                                <label><input type="checkbox"> Recuerdame</label>
+                                <a href="/users/forgot">¿Olvidaste tu contraseña?</a>
+                            </div>
 
-</div>
-</main>
-    <%- include('../partials/footer') %>
+                            <button type="submit" class="btn">Iniciar</button>
 
-</body>
+                            <div class="register-link">
+                                <p> ¿No tenés una cuenta? <a href="/users/register">Registrate</a></p>
+                            </div>
+
+                    </div>
+                </main>
+                <%- include('../partials/footer') %>
+
+    </body>
+
 </html>

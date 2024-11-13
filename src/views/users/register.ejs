@@ -1,47 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-    
 
-	<%- include('../partials/head',{
-		title : 'Registro de Sesión'
-	}) %>
-	<body class="register-body">
-		<div class="container"> <!-- Contenedor ppal -->
-			<%- include('../partials/header') %> 
-            <!DOCTYPE html>
-<html>
-<head>
-    <title>Registro</title>
-</head>
-<body>
-    <main class="main-login">
-        <div class="login-wrapper">
-            <form action="/register" method="POST">
-                <h1>Registrarse</h1>
-                <div class="input-box">
-                    <input type="text" placeholder="Nombre de usuario" name="username" required>
-                </div>
-                <div class="input-box">
-                    <input type="password" placeholder="Contraseña" name="password" required>
-                </div>
-                <div class="input-box">
-                    <input type="password" placeholder="Confirmar contraseña" name="confirm_password" required>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox"> Recordarme</label>
-                    <a href="/login">¿Ya tienes una cuenta?</a>
-                </div>
-                <button type="submit" class="btn">Registrarse</button>
-            </form>
-            <div class="register-link">
-                <p>No tengo una cuenta. <a href="/login">Iniciar sesión</a></p>
-            </div>
-        </div>
-    </main>
-</body>
-</html>
-            
-<!--
+
+<%- include('../partials/head',{ title : 'Registro de Sesión' }) %>
+
+    <body class="register-body">
+        <div class="container"> <!-- Contenedor ppal -->
+            <%- include('../partials/header') %>
+
+                <main class="main-login">
+                    <div class="login-wrapper">
+                        <form action="/users/register" method="POST">
+                            <h1>Registrarse</h1>
+                            <div class="input-box">
+                                <input type="text" id="name" name="name" placeholder="Ingresá tu nombre"
+                                    value="<%= locals.old && old.name ? old.name : null %>"
+                                    class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>">
+                                <small id="name-error" class="text-danger ms-2">
+                                    <%= (locals.errors && errors.name) ? errors.name.msg : null %>
+                                </small>
+
+                            </div>
+                            <div class="input-box">
+                                <input type="text" id="email"
+                                    class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                                    name="email" placeholder="Ingresá tu email"
+                                    value="<%= locals.old && old.email ? old.email : null %>">
+                                <small id="email-error" class="text-danger ms-2">
+                                    <%= (locals.errors && errors.email) ? errors.email.msg : null %>
+                                </small>
+
+                            </div>
+                            <div class="input-box">
+                                <input type="password" id="passsword" name="password" placeholder="Contraseña"
+                                    class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>">
+                                <small id="password-error" class="text-danger ms-2">
+                                    <%= (locals.errors && errors.password) ? errors.password.msg : null %>
+                                </small>
+
+                            </div>
+
+                            <div class="input-box">
+
+                                <input type="password" id="passsword" name="password2"
+                                    placeholder="Reingrese la contraseña"
+                                    class="form-control <%= locals.errors && errors.password2 ? 'is-invalid' : null %>">
+                                <small id="password2-error" class="text-danger ms-2">
+                                    <%= (locals.errors && errors.password2) ? errors.password2.msg : null %>
+                                </small>
+
+                            </div>
+
+                            <div class="remember-forgot">
+                                <input type="checkbox" id="terms" name="terms" value="">
+                                <label for="terms">Acepto bases y condiciones</label>
+                                <small id="terms-error" class="text-danger ms-2">
+                                    <%= (locals.errors && errors.terms) ? errors.terms.msg : null %>
+                                </small>
+
+                                <a href="/users/login">¿Ya tenés una cuenta?</a>
+                            </div>
+                            <button type="submit" class="btn">Registrarse</button>
+                        </form>
+
+                    </div>
+                </main>
+
+                <!--
             <form method="POST">
                <div class="register-main-content">
                 <main class="card" style="max-width: 600px;"> 
@@ -96,8 +121,9 @@
             </div>
         </div>
    -->
-        
-<%- include('../partials/footer') %>
 
-</body>
+                <%- include('../partials/footer') %>
+
+    </body>
+
 </html>

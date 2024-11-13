@@ -74,10 +74,24 @@ p {
 	margin-bottom: 20px;
 }
 
+h2, h3, p {
+	margin: 10px 0; /* Añade espacio entre los elementos */
+}
 ul {
 	list-style-type: disc;
 	margin-left: 20px;
 }
+
+
+
+section {
+    border: 1px solid #ccc; /* Línea de borde de color gris claro */
+    padding: 20px; /* Espaciado interno para que el contenido no esté pegado al borde */
+    margin-bottom: 20vh; /* Espaciado entre secciones */
+    border-radius: 10px; /* Bordes redondeados si lo deseas */
+    background-color: #ffffff; /* Color de fondo para la sección */
+}
+
 textarea {
     resize: none; /* Deshabilita el redimensionamiento manual */
     overflow: hidden	;	 /* Oculta el scroll */

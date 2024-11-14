@@ -12,79 +12,80 @@
             <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/"> <lord-icon
-                        class="icono"
-                        src="https://cdn.lordicon.com/cnpvyndp.json"
-                        trigger="morph"
-                        colors="primary:#ffffff"
-                        state="morph-home-1"
-                        alt="pagina principal"
-                            >
-                    </lord-icon></a>
+                    <a class="nav-link" href="/"> <lord-icon class="icono" src="https://cdn.lordicon.com/cnpvyndp.json"
+                            trigger="morph" colors="primary:#ffffff" state="morph-home-1" alt="pagina principal">
+                        </lord-icon></a>
                 </li>
 
                 <% if (locals.userLogin && locals.userLogin.rol=="admin" ) { %>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin"><lord-icon
-                            src="https://cdn.lordicon.com/pflszboa.json"
-                            trigger="hover"
-                            colors="primary:#ffffff"
-                            alt="administrador"
-                            >
-                        </lord-icon></a>
+                        <a class="nav-link" href="/admin"><lord-icon src="https://cdn.lordicon.com/pflszboa.json"
+                                trigger="hover" colors="primary:#ffffff" alt="administrador">
+                            </lord-icon></a>
                     </li>
                     <% } %>
-    
+
                         <% if (locals.userLogin) { %>
                             <li class="nav-item">
                                 <a class="nav-link" href="/users/profile"><lord-icon
-                                    src="https://cdn.lordicon.com/kthelypq.json"
-                                    trigger="hover"
-                                    colors="primary:#ffffff"
-                                    alt =" perfil"
-                                   ></a>
-                           
+                                        src="https://cdn.lordicon.com/kthelypq.json" trigger="hover"
+                                        colors="primary:#ffffff" alt=" perfil"></a>
+
                             </li>
                             <% }else{ %>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/users/login"><lord-icon
-                                        src="https://cdn.lordicon.com/kthelypq.json"
-                                        trigger="hover"
-                                        colors="primary:#ffffff"
-                                        alt="iniciar sesion"
-                                       >
-                                    </lord-icon></a>
+                                            src="https://cdn.lordicon.com/kthelypq.json" trigger="hover"
+                                            colors="primary:#ffffff" alt="iniciar sesion">
+                                        </lord-icon></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/users/register"><lord-icon
-                                        src="https://cdn.lordicon.com/vdjwmfqs.json"
-                                        trigger="hover"
-                                        colors="primary:#ffffff"
-                                        alt="registro"
-                                        >
-                                    </lord-icon></a>
+                                            src="https://cdn.lordicon.com/vdjwmfqs.json" trigger="hover"
+                                            colors="primary:#ffffff" alt="registro">
+                                        </lord-icon></a>
                                 </li>
                                 <% } %>
-    
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><lord-icon
-                        src="https://cdn.lordicon.com/lecprnjb.json"
-                        trigger="hover"
-                        colors="primary:#ffffff"
-                        alt="configuracion"
-                        >
-                    </lord-icon></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact"><lord-icon
-                        src="https://cdn.lordicon.com/axteoudt.json"
-                        trigger="hover"
-                        state="hover-help-center-2"
-                        colors="primary:#ffffff"
-                        alt="ayuda">
-                    </lord-icon></a>
 
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><lord-icon
+                                                src="https://cdn.lordicon.com/lecprnjb.json" trigger="hover"
+                                                colors="primary:#ffffff" alt="configuracion">
+                                            </lord-icon></a>
+                                    </li>
 
+                                    <li class="nav-link">
+                                        <lord-icon
+                                            src="https://cdn.lordicon.com/eouimtlu.json"
+                                            trigger="click"
+                                            colors="primary:#ffffff"
+                                            style="cursor: pointer;"
+                                            
+                                        ></lord-icon>
+                                    <!--
+                                        <article id="table-of-contents">
+                                            <div class="container">
+                                                <nav id="menu" class="menu-hidden">
+                                                    <ul class="list-unstyled">
+                                                        <li><a href="#welcome"><i class="fas fa-angle-right"></i> Bienvenida</a></li>
+                                                        <li><a href="#about"><i class="fas fa-angle-right"></i> Un Sueño Colectivo</a></li>
+                                                        <li><a href="#carousel"><i class="fas fa-angle-right"></i> Información Importante</a></li>
+                                                        <li><a href="#goals"><i class="fas fa-angle-right"></i> Objetivos del Proyecto</a></li>
+                                                        <li><a href="#gallery"><i class="fas fa-angle-right"></i> Galería de Actividades</a></li>
+                                                        <li><a href="#project-info"><i class="fas fa-angle-right"></i> Información del Proyecto</a></li>
+                                                        <li><a href="#problem-description"><i class="fas fa-angle-right"></i> Descripción del Problema</a></li>
+                                                        <li><a href="#objectives"><i class="fas fa-angle-right"></i> Objetivos del Proyecto</a></li>
+                                                        <li><a href="#justification"><i class="fas fa-angle-right"></i> Fundamentación</a></li>
+                                                        <li><a href="#founders"><i class="fas fa-angle-right"></i> Nuestros Fundadores</a></li>
+                                                        <li><a href="#contact"><i class="fas fa-angle-right"></i> Contáctanos</a></li>
+                                                        <li><a href="#donations"><i class="fas fa-angle-right"></i> Haz tu Donación</a></li>
+                                                        <li><a href="#location"><i class="fas fa-angle-right"></i> Ubicación</a></li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </article>-->
+                                    </li>
+                                    
         </div>
     </nav>
 </header>

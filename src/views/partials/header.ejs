@@ -46,45 +46,59 @@
                                         </lord-icon></a>
                                 </li>
                                 <% } %>
-
+<!--
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#"><lord-icon
+                                        <a class="nav-link"><lord-icon
                                                 src="https://cdn.lordicon.com/lecprnjb.json" trigger="hover"
                                                 colors="primary:#ffffff" alt="configuracion">
                                             </lord-icon></a>
                                     </li>
 
-                                    <li class="nav-link">
-                                        <lord-icon
-                                            src="https://cdn.lordicon.com/eouimtlu.json"
-                                            trigger="click"
-                                            colors="primary:#ffffff"
-                                            style="cursor: pointer;"
-                                            
-                                        ></lord-icon>
-                                    <!--
-                                        <article id="table-of-contents">
-                                            <div class="container">
-                                                <nav id="menu" class="menu-hidden">
-                                                    <ul class="list-unstyled">
-                                                        <li><a href="#welcome"><i class="fas fa-angle-right"></i> Bienvenida</a></li>
-                                                        <li><a href="#about"><i class="fas fa-angle-right"></i> Un Sueño Colectivo</a></li>
-                                                        <li><a href="#carousel"><i class="fas fa-angle-right"></i> Información Importante</a></li>
-                                                        <li><a href="#goals"><i class="fas fa-angle-right"></i> Objetivos del Proyecto</a></li>
-                                                        <li><a href="#gallery"><i class="fas fa-angle-right"></i> Galería de Actividades</a></li>
-                                                        <li><a href="#project-info"><i class="fas fa-angle-right"></i> Información del Proyecto</a></li>
-                                                        <li><a href="#problem-description"><i class="fas fa-angle-right"></i> Descripción del Problema</a></li>
-                                                        <li><a href="#objectives"><i class="fas fa-angle-right"></i> Objetivos del Proyecto</a></li>
-                                                        <li><a href="#justification"><i class="fas fa-angle-right"></i> Fundamentación</a></li>
-                                                        <li><a href="#founders"><i class="fas fa-angle-right"></i> Nuestros Fundadores</a></li>
-                                                        <li><a href="#contact"><i class="fas fa-angle-right"></i> Contáctanos</a></li>
-                                                        <li><a href="#donations"><i class="fas fa-angle-right"></i> Haz tu Donación</a></li>
-                                                        <li><a href="#location"><i class="fas fa-angle-right"></i> Ubicación</a></li>
-                                                    </ul>
-                                                </nav>
-                                            </div>
-                                        </article>-->
-                                    </li>
+       
+  
+
+<div class="nav">
+    <lord-icon src="https://cdn.lordicon.com/lecprnjb.json" trigger="hover" colors="primary:#ffffff" alt="configuracion" onclick="toggleMenu()"></lord-icon>
+    <div id="menu">
+        <button onclick="cambiarTamano('aumentar')">+</button>
+        <button onclick="cambiarTamano('resetear')">A</button>
+        <button onclick="cambiarTamano('disminuir')">-</button>
+    </div>
+</div>
+
+
+  -->     
+
+
+  <li class="nav-link" >
+    <lord-icon
+    id="menu-trigger"
+        src="https://cdn.lordicon.com/eouimtlu.json"
+        trigger="click"
+        colors="primary:#ffffff"
+        style="cursor: pointer;"
+        onclick="toggleMenu()"
+    ></lord-icon>
+  <div id="menu-container">  
+    <nav id="menu">
+        <ul class="menu-list">
+            <li><a href="#welcome"><i class="fas fa-angle-right"></i> Bienvenida</a></li>
+            <li><a href="#about"><i class="fas fa-angle-right"></i> Un Sueño Colectivo</a></li>
+            <li><a href="#carousel"><i class="fas fa-angle-right"></i> Información Importante</a></li>
+            <li><a href="#goals"><i class="fas fa-angle-right"></i> Objetivos del Proyecto</a></li>
+            <li><a href="#gallery"><i class="fas fa-angle-right"></i> Galería de Actividades</a></li>
+            <li><a href="#project-info"><i class="fas fa-angle-right"></i> Información del Proyecto</a></li>
+            <li><a href="#problem-description"><i class="fas fa-angle-right"></i> Descripción del Problema</a></li>
+            <li><a href="#objectives"><i class="fas fa-angle-right"></i> Objetivos del Proyecto</a></li>
+            <li><a href="#justification"><i class="fas fa-angle-right"></i> Fundamentación</a></li>
+            <li><a href="#founders"><i class="fas fa-angle-right"></i> Nuestros Fundadores</a></li>
+            <li><a href="#contact"><i class="fas fa-angle-right"></i> Contáctanos</a></li>
+            <li><a href="#donations"><i class="fas fa-angle-right"></i> Haz tu Donación</a></li>
+            <li><a href="#location"><i class="fas fa-angle-right"></i> Ubicación</a></li>
+        </ul>
+    </nav>
+</div>
+</li>
                                     
         </div>
     </nav>

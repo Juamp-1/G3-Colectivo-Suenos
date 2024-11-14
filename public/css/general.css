@@ -35,17 +35,10 @@ body {
 	color: #333;
 	line-height: 1.5;
 	min-height: 100vh;
-  
+
 }
 
-img{
-    
-    height: auto;
-    border: 1px solid #ccc; /* Línea de borde de color gris claro */
-     /* Espaciado interno para que el contenido no esté pegado al borde */
- /* Espaciado entre secciones */
-    border-radius: 10px;
-}
+
 
 ul,
 ol {

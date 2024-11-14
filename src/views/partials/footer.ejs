@@ -84,6 +84,51 @@
   }
 </script>
 
+<script>document.addEventListener('DOMContentLoaded', function() {
+  const menuTrigger = document.getElementById('menu-trigger');
+  const menuList = document.getElementById('menu-list');
+
+  menuTrigger.addEventListener('click', function() {
+      menuList.style.display = menuList.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Event listener para los enlaces del menú
+  menuList.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') {
+          window.location.href = e.target.getAttribute('href');
+      }
+  });
+});
+</script>
+
+<!--
+<script>
+  function cambiarTamano(accion) {
+      const body = document.body;
+      let tamañoActual = parseFloat(window.getComputedStyle(body).fontSize);
+      
+      if (accion === 'aumentar') {
+          body.style.fontSize = (tamañoActual + 2) + 'px'; // Aumentar tamaño de letra del cuerpo
+      } else if (accion === 'disminuir') {
+          body.style.fontSize = (tamañoActual - 2) + 'px'; // Disminuir tamaño de letra del cuerpo
+      } else if (accion === 'resetear') {
+          body.style.fontSize = '16px'; // Restablecer a tamaño por defecto
+      }
+  }
+
+  function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'none' ? 'block' : 'none'; // Alternar visibilidad
+  }
+
+  window.onclick = function(event) {
+      const menu = document.getElementById('menu');
+      if (!event.target.closest('.nav')) { // Cerrar el menú si se hace clic fuera de él
+          menu.style.display = 'none';
+      }
+  }
+</script>
+-->
 
 <script src="https://kit.fontawesome.com/c65f2f1cc8.js" crossorigin="anonymous"></script>
 <script src="https://cdn.lordicon.com/lordicon.js"></script>

@@ -65,7 +65,7 @@ module.exports = {
                     return res.redirect('/admin')
                 }
 
-                return res.redirect('/')
+                return res.redirect('/profile')
             }else {
                 return res.render('users/login',{
                     msg : "Credenciales inválidas"

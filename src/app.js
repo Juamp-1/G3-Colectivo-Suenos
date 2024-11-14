@@ -7,7 +7,7 @@ const session = require('express-session')
 const morgan = require('morgan')
 const connectDB = require("./config/connectDB.js");
 
-const PORT = 3003;
+const PORT = 3000;
 
 const indexRoutes = require('./routes/index.routes');
 const commentsRoutes = require('./routes/comments.routes');

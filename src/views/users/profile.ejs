@@ -1,67 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
-    
+<%- include('../partials/head', { title : 'Perfil' }) %>
+<body class="profile-body">
+    <div class="container"> <!-- Contenedor ppal -->
+        <%- include('../partials/header') %>
 
-	<%- include('../partials/head',{
-		title : 'Perfil'
-	}) %>
-	<body class="profile-body">
-		<div class="container"> <!-- Contenedor ppal -->
-			<%- include('../partials/header') %>
-
-    <section class="seccion-perfil-usuario">
-        <div class="perfil-usuario-header">
-            <div class="perfil-usuario-portada">
-                <div class="perfil-usuario-avatar">
-                    <img src="/img/fabi.jpg" alt="img-avatar">
-                    <button type="button" class="boton-avatar">
-                        <i class="far fa-image"></i>
+        <section class="seccion-perfil-usuario">
+            <div class="perfil-usuario-header">
+                <div class="perfil-usuario-portada">
+                    <div class="perfil-usuario-avatar">
+                        <img id="profile-picture" src="/img/fabi.jpg" alt="img-avatar">
+                        <button type="button" class="boton-avatar" onclick="document.getElementById('profile-picture-upload').click();">
+                            <i class="far fa-image"></i>
+                        </button>
+                        <input type="file" id="profile-picture-upload" accept="image/*" style="display: none;" onchange="loadProfilePicture(event)">
+                    </div>
+                    <button type="button" class="boton-portada" onclick="document.getElementById('background-image-upload').click();">
+                        <i class="far fa-image"></i> Cambiar fondo
                     </button>
+                    <input type="file" id="background-image-upload" accept="image/*" style="display: none;" onchange="loadBackgroundImage(event)">
                 </div>
-                <button type="button" class="boton-portada">
-                    <i class="far fa-image"></i> Cambiar fondo
-                </button>
             </div>
-        </div>
-        <div class="perfil-usuario-body">
-            <div class="perfil-usuario-bio">
-                <h3 class="titulo">Nombre de Usuario</h3>
-                <div class="perfil-usuario-footer">
-                    <ul class="lista-datos" style="list-style: none; padding: 0; margin: 0; text-align: left;">
-                        <li style="display: flex; align-items: center; margin: 5px 0;">
-                            <i class="icono fas fa-map-signs" style="margin-right: 8px;"></i> Nombre y apellido: Juan Mewing
-                        </li>
-                        <li style="display: flex; align-items: center; margin: 5px 0;">
-                            <i class="icono fas fa-phone-alt" style="margin-right: 8px;"></i> Telefono: +123456789
-                        </li>
-                        <li style="display: flex; align-items: center; margin: 5px 0;">
-                            <i class="icono fas fa-solid fa-hand-holding-dollar" style="margin-right: 8px;"></i> Donaciones: $100
-                        </li>
-                        <li style="display: flex; align-items: center; margin: 5px 0;">
-                            <i class="icono fas fa-calendar-alt" style="margin-right: 8px;"></i> Fecha de Ingreso: 01/01/2023
-                        </li>
-                        <li style="display: flex; align-items: center; margin: 5px 0;">
-                            <i class="icono fas fa-share-alt" style="margin-right: 8px;"></i> Redes sociales: @usuario
-                        </li>
-                    </ul>
+            <div class="perfil-usuario-body">
+                <div class="perfil-usuario-bio">
+                    <h3 class="titulo">Nombre de Usuario</h3>
+                    <div class="perfil-usuario-footer">
+                        <ul class="lista-datos" style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                            <li style="display: flex; align-items: center; margin: 5px 0;">
+                                <i class="icono fas fa-map-signs" style="margin-right: 8px;"></i>
+                                <span class="editable" data-field="nombre">Nombre y apellido: <span id="nombre">Juan Mewing</span></span>
+                            </li>
+                            <li style="display: flex; align-items: center; margin: 5px 0;">
+                                <i class="icono fas fa-phone-alt" style="margin-right: 8px;"></i>
+                                <span class="editable" data-field="telefono">Teléfono: <span id="telefono">+123456789</span></span>
+                            </li>
+                            <li style="display: flex; align-items: center; margin: 5px 0;">
+                                <i class="icono fas fa-solid fa-hand-holding-dollar" style="margin-right: 8px;"></i>
+                                <span class="editable" data-field="donaciones">Donaciones: <span id="donaciones">$100</span></span>
+                            </li>
+                            <li style="display: flex; align-items: center; margin: 5px 0;">
+                                <i class="icono fas fa-calendar-alt" style="margin-right: 8px;"></i>
+                                <span class="editable" data-field="fechaIngreso">Fecha de Ingreso: <span id="fechaIngreso">01/01/2023</span></span>
+                            </li>
+                            <li style="display: flex; align-items: center; margin: 5px 0;">
+                                <i class="icono fas fa-share-alt" style="margin-right: 8px;"></i>
+                                <span class="editable" data-field="redesSociales">Redes sociales: <span id="redesSociales">@usuario</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="redes-sociales">
+                        <a href="" class="boton-redes facebook fab fa-facebook-f"><i class="icon-facebook"></i></a>
+                        <a href="" class="boton-redes twitter fab fa-twitter"><i class="icon-twitter"></i></a>
+                        <a href="" class="boton-redes instagram fab fa-instagram"><i class="icon-instagram"></i></a>
+                    </div>
+                    <div class="botones" style="margin-top: 20px; text-align: right;">
+                        <button id="editarBtn" class="btn btn-primary">Editar Datos</button>
+                        <button id="guardarBtn" class="btn btn-success" style="margin-left: 10px;">Guardar</button>
+                    </div>
                 </div>
-            <div class="redes-sociales">
-                <a href="" class="boton-redes facebook fab fa-facebook-f"><i class="icon-facebook"></i></a>
-                <a href="" class="boton-redes twitter fab fa-twitter"><i class="icon-twitter"></i></a>
-                <a href="" class="boton-redes instagram fab fa-instagram"><i class="icon-instagram"></i></a>
             </div>
-        </div>
-    </section>
-    
-    <section>
-    <div class="seccion-informacion-adicional"> <!-- Color verde muy claro -->
-        <h2 class="subtitulo">Información Adicional</h2>
-        <div class="perfil-container">
-            <div class="perfil-izquierda">
-                <div class="informacion-perfil">
-                    <img src="/img/rosana.jpg" alt="Perfil 1" class="imagen-perfil">
-                    <span class="nombre">Usuario 1</span>
-                </div>
+            
+            <script>
+                const editableElements = document.querySelectorAll('.editable');
+                const editarBtn = document.getElementById('editarBtn');
+                const guardarBtn = document.getElementById('guardarBtn');
+            
+                // Función para habilitar la edición
+                editarBtn.addEventListener('click', () => {
+                    editableElements.forEach(element => {
+                        const span = element.querySelector('span');
+                        const currentValue = span.textContent;
+                        span.innerHTML = `<input type="text" value="${currentValue}" />`;
+                    });
+                });
+            
+                // Función para guardar los cambios
+                guardarBtn.addEventListener('click', () => {
+                    editableElements.forEach(element => {
+                        const input = element.querySelector('input');
+                        if (input) {
+                            const newValue = input.value;
+                            const span = element.querySelector('span');
+                            span.textContent = newValue;
+                        }
+                    });
+                    alert('Los datos han sido guardados.');
+                });
+            </script>
+        </section>
+        
+        <section>
+            <div class="seccion-informacion-adicional"> <!-- Color verde muy claro -->
+                <h2 class="subtitulo">Información Adicional</h2>
+                <div class="perfil-container">
+                    <div class="perfil-izquierda">
+                        <div class="informacion-perfil">
+                            <img src="/img/rosana.jpg" alt="Perfil 1" class="imagen-perfil">
+                            <span class="nombre">Usuario 1</span>
+                        </div>
                 <div class="informacion-perfil">
                     <img src="/img/fabi.jpg" alt="Perfil 2" class="imagen-perfil">
                     <span class="nombre">Usuario 2</span>

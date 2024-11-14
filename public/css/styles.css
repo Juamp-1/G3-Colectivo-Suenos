@@ -64,11 +64,6 @@
 	/* Asegúrate de que ocupe todo el ancho */
 }
 
-.nav-item {
-	margin: 0 10px;
-	/* Espaciado entre los iconos */
-}
-
 .nav-link {
 	display: flex;
 	/* Asegúrate de que el enlace sea un contenedor flex */
@@ -278,6 +273,7 @@
 }
 
 .donate-icon {
+	visibility: hidden;
 	position: fixed;
 	/* Mantiene el icono en su lugar al hacer scroll */
 	top: 80px;
@@ -343,18 +339,15 @@
 	background-image: url(/img/colectivo.jpg);
 	background-size: cover;
 }
-
+.list-group{
+	display: inline-flex;
+}
 .section-info {
 	background-image: url(/img/colectivo.jpg);
 	background-size: cover;
 
 }
 
-
-
-a {
-	text-decoration: none;
-}
 
 .scroll-up {
 	display: block;
@@ -401,8 +394,16 @@ a {
 	background-position: center;
 	background-color: rgb(246, 246, 246);
 	padding: 20px;
-	/* Centra la imagen */
+	height: auto;
+	/* Mantiene la proporción de la imagen */
+	object-fit: contain;
 	text-align: center;
+	border: 1px solid #ccc;
+	/* Línea de borde de color gris claro */
+	width: 100%;
+	margin-bottom: 20vh;
+	/* Espaciado entre secciones */
+	border-radius: 10px;
 }
 
 .container-welcome {
@@ -436,11 +437,8 @@ a {
 	padding-bottom: 10vh;
 }
 
-.section-info article{
-	
-}
-.section-info h3{
-	color: #FFFFFF ;
+.section-info h3 {
+	color: #FFFFFF;
 }
 
 
@@ -463,54 +461,67 @@ a {
 	background: transparent;
 }
 
-
-/* Estilos para la tabla de contenido */
-#table-of-contents {
-    background-color: #f8f9fa; /* Color de fondo opcional */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto de profundidad */
-    display: inline-block; /* Ajusta el tamaño a solo el texto */
-}
-
 .section-content h2 {
-    color: #333; /* Color del título más oscuro */
+	color: #333;
+	/* Color del título más oscuro */
 }
 
 .accordion-button {
-    background-color: #007bff; /* Color de fondo del botón */
-    color: #fff; /* Color del texto */
-    font-size: 1.25rem; /* Tamaño de fuente más grande */
-    letter-spacing: 1px; /* Espaciado entre letras */
+	background-color: #007bff;
+	/* Color de fondo del botón */
+	color: #fff;
+	/* Color del texto */
+	font-size: 1.25rem;
+	/* Tamaño de fuente más grande */
+	letter-spacing: 1px;
+	/* Espaciado entre letras */
 }
 
 .accordion-body {
-    background-color: #f8f9fa; /* Color de fondo del cuerpo del acordeón */
-    font-size: 1.1rem; /* Tamaño de fuente más grande */
-    letter-spacing: 0.5px; /* Espaciado entre letras */
+	background-color: #f8f9fa;
+	/* Color de fondo del cuerpo del acordeón */
+	font-size: 1.1rem;
+	/* Tamaño de fuente más grande */
+	letter-spacing: 0.5px;
+	/* Espaciado entre letras */
 }
 
 .accordion-body a {
-    color: #333; /* Color del texto más oscuro */
-    display: block; /* Para que el enlace ocupe todo el ancho */
-    padding: 5px 0; /* Espaciado interno entre enlaces */
+	color: #333;
+	/* Color del texto más oscuro */
+	display: block;
+	/* Para que el enlace ocupe todo el ancho */
+	padding: 5px 0;
+	/* Espaciado interno entre enlaces */
 }
 
 .accordion-body a:hover {
-    text-decoration: underline; /* Subrayado al pasar el mouse */
-}
-.banner {
-    position: relative; /* Posicionamiento relativo para la sección */
-    width: 100vw; /* Ancho completo de la ventana del navegador */
-    overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
-    margin-left: calc(-50vw + 50%); /* Ajusta el margen para centrar la sección */
+	text-decoration: underline;
+	/* Subrayado al pasar el mouse */
 }
 
+
 .banner img {
-    width: 100%; /* Ancho completo de la sección */
-    height: auto; /* Altura automática para mantener la proporción */
-    display: block; /* Elimina el espacio en la parte inferior de la imagen */
+	width: 100%;
+	/* Ancho completo de la sección */
+	height: auto;
+	/* Altura automática para mantener la proporción */
+	display: block;
+	/* Elimina el espacio en la parte inferior de la imagen */
+	border-radius: 10px;
 }
+
+$('.gallery').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	autoplay: true,
+	autoplaySpeed: 5000, // advance every 5 seconds
+	fade: true,
+	cssEase: 'linear', // use a linear animation effect
+	speed: 2000 // animation duration of 2 seconds
+  });
+
+
 
 @media (max-width: 1199.98px) {
 	.scroll-up {

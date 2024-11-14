@@ -23,7 +23,9 @@
             </div>
             <div class="perfil-usuario-body">
                 <div class="perfil-usuario-bio">
-                    <h3 class="titulo">Nombre de Usuario</h3>
+                    <h3 class="titulo editable" data-field="nombreUsuario">
+                       Nombre: <span id="nombreUsuario"></span>
+                    </h3>
                     <div class="perfil-usuario-footer">
                         <ul class="lista-datos" style="list-style: none; padding: 0; margin: 0; text-align: left;">
                             <li style="display: flex; align-items: center; margin: 5px 0;">
@@ -87,7 +89,6 @@
                     alert('Los datos han sido guardados.');
                 });
             </script>
-        </section>
         
         <section>
             <div class="seccion-informacion-adicional"> <!-- Color verde muy claro -->

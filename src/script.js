@@ -4,3 +4,5 @@ document.querySelectorAll('textarea').forEach(textarea => {
         this.style.height = (this.scrollHeight) + 'px'; // Ajusta la altura según el contenido
     });
 });
+
+

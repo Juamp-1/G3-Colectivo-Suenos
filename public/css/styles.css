@@ -5,6 +5,7 @@
 @import url("/css/profile.css");
 @import url("/css/socials.css");
 @import url("/css/detail.css");
+@import url("/css/home.css");
 
 .objective-list {
 	list-style-type: none;
@@ -306,7 +307,6 @@
 }
 
 .donate-icon {
-	visibility: hidden;
 	position: fixed;
 	/* Mantiene el icono en su lugar al hacer scroll */
 	top: 80px;

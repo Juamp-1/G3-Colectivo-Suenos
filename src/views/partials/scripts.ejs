@@ -1,0 +1,146 @@
+<script>
+    document.querySelectorAll('textarea').forEach(textarea => {
+      textarea.addEventListener('input', function () {
+        this.style.height = 'auto'; // Resetea la altura
+        this.style.height = (this.scrollHeight) + 'px'; // Ajusta la altura según el contenido
+      });
+    });
+  </script>
+  
+  
+  <script>
+    window.addEventListener('load', function () {
+      const scrollUpButton = document.querySelector('.scroll-up');
+  
+      function toggleScrollUpButton() {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const documentHeight = document.body.offsetHeight;
+        const halfPage = documentHeight / 2;
+  
+  
+        if (scrollPosition > halfPage) {
+          scrollUpButton.style.opacity = '1'; // Mostrar el botón
+          scrollUpButton.style.visibility = 'visible'; // Hacerlo visible
+        } else {
+          scrollUpButton.style.opacity = '0'; // Ocultar el botón
+          scrollUpButton.style.visibility = 'hidden'; // Hacerlo invisible
+        }
+      }
+  
+      window.addEventListener('scroll', toggleScrollUpButton);
+      toggleScrollUpButton(); // Llama a la función al cargar la página
+    });
+  </script>
+  <script>
+    function addBounceClass(event) {
+      const button = event.currentTarget;
+      button.classList.add('bounce');
+  
+      // Remueve la clase después de la animación para que pueda volver a aplicarse
+      setTimeout(() => {
+        button.classList.remove('bounce');
+      }, 500); // Debe coincidir con la duración de la animación
+    }
+  </script>
+  
+  <script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuTrigger = document.getElementById('menu-trigger');
+    const menuList = document.getElementById('menu-list');
+  
+    menuTrigger.addEventListener('click', function() {
+        menuList.style.display = menuList.style.display === 'block' ? 'none' : 'block';
+    });
+  
+    // Event listener para los enlaces del menú
+    menuList.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            window.location.href = e.target.getAttribute('href');
+        }
+    });
+  });
+  </script>
+  
+             
+  <script>
+    const editableElements = document.querySelectorAll('.editable');
+    const editarBtn = document.getElementById('editarBtn');
+    const guardarBtn = document.getElementById('guardarBtn');
+  
+    // Función para habilitar la edición
+    editarBtn.addEventListener('click', () => {
+        editableElements.forEach(element => {
+            const span = element.querySelector('span');
+            const currentValue = span.textContent;
+            span.innerHTML = `<input type="text" value="${currentValue}" />`;
+        });
+    });
+  
+    // Función para guardar los cambios
+    guardarBtn.addEventListener('click', () => {
+        editableElements.forEach(element => {
+            const input = element.querySelector('input');
+            if (input) {
+                const newValue = input.value;
+                const span = element.querySelector('span');
+                span.textContent = newValue;
+            }
+        });
+        alert('Los datos han sido guardados.');
+    });
+  </script>
+   
+  <script>
+    function loadProfilePicture(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('profile-picture').src = e.target.result; // Cambia la imagen
+            };
+            reader.readAsDataURL(file); // Lee el archivo como URL de datos
+        }
+    }
+    
+    function loadBackgroundImage(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                // Asumiendo que tienes un elemento para el fondo
+                document.querySelector('.perfil-usuario-header').style.backgroundImage = `url(${e.target.result})`;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+    </script>
+  <script>
+  function openModal() {
+    const modal = document.getElementById('imageModal');
+    const fullImage = document.getElementById('fullImage');
+    fullImage.src = document.getElementById('profile-picture').src; // Establece la imagen en el modal
+    modal.style.display = 'flex'; // Muestra el modal
+  }
+  
+  function closeModal() {
+    document.getElementById('imageModal').style.display = 'none'; // Oculta el modal
+  }
+  </script>
+  
+  <script src="../../campana.js"></script>
+  
+  
+  
+  
+  
+  <script src="https://kit.fontawesome.com/c65f2f1cc8.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>

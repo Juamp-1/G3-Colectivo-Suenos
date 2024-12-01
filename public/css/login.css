@@ -8,6 +8,7 @@
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(var(--e-global),  var(--color-primary)); 
+    border-radius: 10px;
   
 }
 

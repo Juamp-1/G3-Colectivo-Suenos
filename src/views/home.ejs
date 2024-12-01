@@ -5,14 +5,16 @@
 <%- include('./partials/head',{ title : 'Fundacion Emperador' }) %>
 
   <body>
+    <%- include('./partials/header') %>
+    <%- include('./partials/donate') %>
     <div class="container"> <!-- Contenedor ppal -->
-      <%- include('./partials/header') %>
+   
 
 
         <div class="container--home">
           <br>
-          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0"
-            data-aos-duration="3000" id="title" class="title-home">
+          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+            data-aos-duration="2000" id="title" class="title-home">
             <h1 class="text-center">Fundación Emperador</h1></br>
             <h2 class="text-center">Colectivo Sueños</h2>
             <h6 class="text-center">- Juntos en la dificultad -</h6>
@@ -22,10 +24,10 @@
           <section id="welcome" class="section-welcome">
             <div class="container-welcome">
 
-              <h2 data-aos-delay="300" style="font-style: italic;" data-aos="fade-down" data-aos-duration="2000">De la
+              <h2 data-aos-delay="3000" style="font-style: italic;" data-aos="fade-down" data-aos-duration="2000">De la
                 protesta a la propuesta</h2>
-              <h3 data-aos-delay="300" data-aos="fade-up" data-aos-duration="2000">NUESTRO OBJETIVO:</h3>
-              <p data-aos="zoom-in-up" data-aos-duration="2500">Mejorar la calidad de vida de las personas con
+              <h3 data-aos-delay="3000" data-aos="fade-up" data-aos-duration="2000">NUESTRO OBJETIVO:</h3>
+              <p data-aos="zoom-in-up" data-aos-delay="3000"  data-aos-duration="2500">Mejorar la calidad de vida de las personas con
                 discapacidad, especialmente las denominadas
                 electrodependientes y sus familias.</p>
 
@@ -372,8 +374,7 @@
         </section>
 
         <%- include('./partials/footer') %>
-          <%- include('./partials/donate') %>
-
+        <%- include('./partials/scripts')%>
 
             <a id="scroll-up" class="scroll-up" href="#">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

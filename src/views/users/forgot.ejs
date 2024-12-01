@@ -5,9 +5,9 @@
 	<%- include('../partials/head',{
 		title : 'Recuperar Contraseña'
 	}) %>
-	<body class="forgot-body">
+	<body class="forgot-body"><%- include('../partials/header') %>
 		<div class="container"> <!-- Contenedor ppal -->
-			<%- include('../partials/header') %>
+			
             <body>
                 <main class="main-login">
                     <div class="login-wrapper">
@@ -28,7 +28,6 @@
                 </main>
 
 
-            <%- include('../partials/footer') %>
-
+                <%- include('../partials/scripts')%>
         </body>
         </html>

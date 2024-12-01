@@ -4,10 +4,10 @@
 
 <%- include('../partials/head',{ title : 'Registro de Sesión' }) %>
 
-    <body class="register-body">
-        <div class="container"> <!-- Contenedor ppal -->
-            <%- include('../partials/header') %>
+    <body class="register-body"> <%- include('../partials/header') %>
 
+        <div class="container"> <!-- Contenedor ppal -->
+           
                 <main class="main-login">
                     <div class="login-wrapper">
                         <form action="/users/register" method="POST">
@@ -67,8 +67,7 @@
                 </main>
 
 
-                <%- include('../partials/footer') %>
-
+                <%- include('../partials/scripts')%>
     </body>
 
 </html>

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include('../partials/head', { title : 'Perfil' }) %>
-<body class="profile-body">
-    <div class="container"> <!-- Contenedor ppal -->
-        <%- include('../partials/header') %>
+<body class="profile-body">  <%- include('../partials/header') %>
+    <%- include('../partials/donate') %>
 
+    <div class="container"> <!-- Contenedor ppal -->
+      
         <section class="seccion-perfil-usuario">
             <div class="perfil-usuario-header">
                 <div class="perfil-usuario-portada">
                     <div class="perfil-usuario-avatar">
-                        <img id="profile-picture" src="/img/fabi.jpg" alt="img-avatar">
+                        <img id="profile-picture" src="" alt="img-avatar">
                         <button type="button" class="boton-avatar" onclick="document.getElementById('profile-picture-upload').click();">
                             <i class="far fa-image"></i>
                         </button>
@@ -18,8 +19,26 @@
                     <button type="button" class="boton-portada" onclick="document.getElementById('background-image-upload').click();">
                         <i class="far fa-image"></i> Cambiar fondo
                     </button>
-                    <input type="file" id="background-image-upload" accept="image/*" style="display: none;" onchange="loadBackgroundImage(event)">
+                  <input type="file" id="background-image-upload" accept="image/*" style="display: none;" onchange="loadBackgroundImage(event)">
+             
+     <!--            <div class="perfil-usuario-avatar">
+                <div class="imagen-circular" onclick="openModal();">
+                    <img id="profile-picture" src="" alt="img-avatar">
                 </div>
+                <button type="button" class="boton-avatar" onclick="document.getElementById('profile-picture-upload').click();">
+                    <i class="far fa-image"></i>
+                </button>
+                <input type="file" id="profile-picture-upload" accept="image/*" style="display: none;" onchange="loadProfilePicture(event)">
+            </div>
+            
+     
+            <div id="imageModal" class="modal" style="display: none;">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="fullImage">
+            </div>   -->
+        
+        
+        </div>
             </div>
             <div class="perfil-usuario-body">
                 <div class="perfil-usuario-bio">
@@ -61,34 +80,7 @@
                     </div>
                 </div>
             </div>
-            
-            <script>
-                const editableElements = document.querySelectorAll('.editable');
-                const editarBtn = document.getElementById('editarBtn');
-                const guardarBtn = document.getElementById('guardarBtn');
-            
-                // Función para habilitar la edición
-                editarBtn.addEventListener('click', () => {
-                    editableElements.forEach(element => {
-                        const span = element.querySelector('span');
-                        const currentValue = span.textContent;
-                        span.innerHTML = `<input type="text" value="${currentValue}" />`;
-                    });
-                });
-            
-                // Función para guardar los cambios
-                guardarBtn.addEventListener('click', () => {
-                    editableElements.forEach(element => {
-                        const input = element.querySelector('input');
-                        if (input) {
-                            const newValue = input.value;
-                            const span = element.querySelector('span');
-                            span.textContent = newValue;
-                        }
-                    });
-                    alert('Los datos han sido guardados.');
-                });
-            </script>
+</section>
         
         <section>
             <div class="seccion-informacion-adicional"> <!-- Color verde muy claro -->
@@ -132,59 +124,9 @@
     </div>
 </section>
 
-<style>
-    .seccion-informacion-adicional {
-        background-color: #d5f5e3; /* Color verde muy claro */
-        padding: 20px; /* Espaciado interno */
-        border-radius: 8px; /* Bordes redondeados */
-        max-width: 800px; /* Ancho máximo para la sección */
-        margin: auto; /* Centra la sección */
-        max-height: 400px; /* Altura máxima para permitir el desplazamiento */
-        overflow-y: auto; /* Habilita el desplazamiento vertical */
-    }
-    .perfil-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    .perfil-izquierda, .perfil-derecha {
-        width: 48%; /* Ajusta el ancho según sea necesario */
-    }
-    .informacion-perfil {
-        display: flex;
-        align-items: center;
-        margin: 10px 0;
-    }
-    .nombre {
-        margin-left: 10px; /* Espacio entre la imagen y el nombre */
-        font-size: 18px; /* Tamaño del texto */
-    }
-    .imagen-perfil {
-        width: 50px; /* Tamaño de la imagen */
-        height: 50px; /* Tamaño de la imagen */
-        border-radius: 50%; /* Hace la imagen redonda */
-    }
-    .boton-anadir-perfil {
-        display: block;
-        margin-top: 20px; /* Espacio superior */
-        float: right; /* Ubica el botón a la derecha */
-        background-color: #4CAF50; /* Color de fondo verde */
-        color: white; /* Color del texto */
-        border: none; /* Sin borde */
-        border-radius: 5px; /* Bordes redondeados */
-        padding: 10px 20px; /* Espaciado interno */
-        font-size: 16px; /* Tamaño de la fuente */
-        cursor: pointer; /* Cambia el cursor al pasar el mouse */
-        transition: background-color 0.3s; /* Transición suave para el hover */
-    }
-    .boton-anadir-perfil:hover {
-        background-color: #45a049; /* Color de fondo al pasar el mouse */
-    }
-</style>
-   
-    
+
 
 <%- include('../partials/footer') %>
-<%- include('../partials/donate') %>
 </body>
+
 </html>

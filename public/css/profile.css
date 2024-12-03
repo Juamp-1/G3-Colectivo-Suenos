@@ -12,9 +12,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background: linear-gradient(#B873FF, transparent)no-repeat,cover;
-    background-position: center;
+    background: #B873FF,cover; 
     margin-bottom: 1.25rem;
+    margin-top: -0.90rem;
 }
 
 .seccion-perfil-usuario .perfil-usuario-portada {
